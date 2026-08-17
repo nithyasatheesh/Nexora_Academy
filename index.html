@@ -8,17 +8,740 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Nexora Data & AI Academy | Madurai
-    </title>
+    <title>Nexora Data & AI Academy | Madurai</title>
 
     <meta name="description"
-          content="Nexora Data & AI Academy in Madurai offers School Tuition, Data Science, Artificial Intelligence, Python, Power BI, SQL and Machine Learning programs.">
+          content="Nexora Data & AI Academy in Madurai offers practical training in Data Science, Artificial Intelligence, Python, Power BI, SQL and school tuition.">
 
-    <meta name="keywords"
-          content="Data Science Academy Madurai, AI Training Madurai, Python Training Madurai, Power BI Training Madurai, Machine Learning Madurai, School Tuition Madurai">
+    <style>
 
-    <link rel="stylesheet" href="style.css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 14px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .academy-logo {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            background: white;
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .academy-name {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .tagline-small {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 3px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 17px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: linear-gradient(
+                135deg,
+                #dbeafe,
+                #eff6ff,
+                #ffffff
+            );
+
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: white;
+            color: #2563eb;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            color: #111827;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #374151;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            color: #4b5563;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            margin: 6px;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 15px;
+            background: #2563eb;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: #111827;
+        }
+
+        .btn-dark:hover {
+            background: #374151;
+        }
+
+        .btn-green {
+            background: #16a34a;
+        }
+
+        .btn-green:hover {
+            background: #15803d;
+        }
+
+
+        /* =========================
+           COMMON SECTIONS
+        ========================= */
+
+        .section {
+            padding: 70px 7%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 34px;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .section-title-line {
+            width: 60px;
+            height: 4px;
+            background: #2563eb;
+            margin: 0 auto 20px;
+            border-radius: 5px;
+        }
+
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #4b5563;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            min-height: 235px;
+            padding: 28px 22px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .card-icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #4b5563;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .details-btn {
+            margin-top: 12px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .details-btn:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           TUITION
+        ========================= */
+
+        .tuition {
+            background: #eef2ff;
+        }
+
+        .tuition-box {
+            background: white;
+            width: 300px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .tuition-box h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .tuition-box ul {
+            list-style: none;
+        }
+
+        .tuition-box li {
+            padding: 7px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            background: #f1f5f9;
+        }
+
+        .project-card {
+            background: white;
+            width: 320px;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .project-card h4 {
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #4b5563;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .project-tech {
+            color: #374151;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FEES
+        ========================= */
+
+        .fee-card {
+            background: white;
+            width: 290px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .fee-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: #111827;
+            margin: 15px 0;
+        }
+
+        .fee-card p {
+            color: #4b5563;
+            font-size: 15px;
+            margin: 5px;
+        }
+
+        .fee-note {
+            margin-top: 30px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           WHY CHOOSE US
+        ========================= */
+
+        .why-section {
+            background: #eef2ff;
+        }
+
+        .why-card {
+            background: white;
+            width: 230px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .why-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #4b5563;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           ABOUT / FACULTY
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .faculty-profile {
+            max-width: 850px;
+            margin: 30px auto 40px;
+            padding: 35px;
+            background: #f8fafc;
+            border-radius: 15px;
+            border-left: 6px solid #2563eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .faculty-profile h2 {
+            color: #111827;
+            margin-bottom: 5px;
+        }
+
+        .faculty-role {
+            color: #2563eb;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .qualification {
+            font-size: 17px;
+            font-weight: bold;
+            color: #374151;
+            margin-bottom: 15px;
+        }
+
+        .expertise {
+            color: #4b5563;
+            font-size: 16px;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            font-size: 17px;
+            color: #4b5563;
+            text-align: left;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           BROCHURE
+        ========================= */
+
+        .brochure {
+            background: #e0f2fe;
+        }
+
+
+        /* =========================
+           ADMISSION
+        ========================= */
+
+        .admission {
+            background: #f8fafc;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #374151;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: Arial;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #111827;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 8px;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #030712;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 2000;
+        }
+
+        .whatsapp:hover {
+            background: #16a34a;
+        }
+
+
+        /* =========================
+           COURSE MODAL
+        ========================= */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.65);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 750px;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 12px;
+            padding: 35px;
+            position: relative;
+            text-align: left;
+        }
+
+        .modal-content h2 {
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .modal-content h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .modal-content ul {
+            padding-left: 25px;
+        }
+
+        .modal-content li {
+            margin-bottom: 5px;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            border: none;
+            background: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: #555;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            nav {
+                line-height: 2;
+            }
+
+            nav a {
+                margin: 5px 8px;
+            }
+
+            .hero {
+                padding: 70px 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .academy-name {
+                font-size: 16px;
+            }
+
+            .tagline-small {
+                font-size: 10px;
+            }
+
+            .academy-logo {
+                width: 52px;
+                height: 52px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .section {
+                padding: 55px 5%;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .form-container {
+                padding: 22px;
+            }
+
+            .whatsapp {
+                right: 12px;
+                bottom: 12px;
+                padding: 12px 16px;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -37,6 +760,7 @@
         <img
             src="images/logo.png"
             alt="Nexora Data & AI Academy Logo"
+            class="academy-logo"
         >
 
         <div>
@@ -56,45 +780,26 @@
 
     <nav>
 
-        <a href="#home">
-            Home
-        </a>
+        <a href="#home">Home</a>
 
-        <a href="#courses">
-            Courses
-        </a>
+        <a href="#courses">Courses</a>
 
-        <a href="#tuition">
-            School Tuition
-        </a>
+        <a href="#tuition">Tuition</a>
 
-        <a href="#weekend-program">
-            Weekend Program
-        </a>
+        <a href="#projects">Projects</a>
 
-        <a href="#projects">
-            Projects
-        </a>
+        <a href="#fees">Fees</a>
 
-        <a href="#fees">
-            Fees
-        </a>
+        <a href="#about">About</a>
 
-        <a href="#about">
-            About
-        </a>
+        <a href="#admission">Admission</a>
 
-        <a href="#admission">
-            Admission
-        </a>
-
-        <a href="#contact">
-            Contact
-        </a>
+        <a href="#contact">Contact</a>
 
     </nav>
 
 </header>
+
 
 
 <!-- =====================================================
@@ -104,23 +809,24 @@
 <section class="hero" id="home">
 
     <div class="hero-badge">
+
         📍 Madurai | Practical & Project-Based Learning
+
     </div>
 
 
     <h1>
 
         Learn. Build.
-
-        <span>
-            Become Industry Ready.
-        </span>
+        <span>Become Industry Ready.</span>
 
     </h1>
 
 
     <h2>
+
         Data Science | AI | Python | Power BI | School Tuition
+
     </h2>
 
 
@@ -158,7 +864,7 @@
             class="btn btn-green"
             href="#admission"
         >
-            🎓 Join / Enquire
+            🎓 Join Free Demo
         </a>
 
     </div>
@@ -168,23 +874,18 @@
 
 
 <!-- =====================================================
-     PROGRAMS
+     COURSES
 ===================================================== -->
 
-<section
-    class="section"
-    id="courses"
->
+<section class="section" id="courses">
 
-    <h2>
-        Our Programs
-    </h2>
+    <h2>Our Programs</h2>
 
     <div class="section-title-line"></div>
 
     <p class="section-intro">
 
-        Carefully structured programs designed to take
+        Industry-oriented programs designed to take
         learners from fundamentals to practical applications.
 
     </p>
@@ -197,25 +898,21 @@
 
         <div class="card">
 
-            <div class="card-icon">
-                🐍
-            </div>
+            <div class="card-icon">🐍</div>
 
-            <h3>
-                Python Programming
-            </h3>
+            <h3>Python Programming</h3>
 
             <p>
                 Learn Python from fundamentals
-                to advanced programming.
+                to practical Data Science programming.
             </p>
 
             <p>
-                Variables • Functions • OOP • NumPy • Pandas
+                Functions • OOP • NumPy • Pandas
             </p>
 
             <button
-                class="course-button"
+                class="details-btn"
                 onclick="openCourse('python')"
             >
                 View Details
@@ -228,13 +925,9 @@
 
         <div class="card">
 
-            <div class="card-icon">
-                📊
-            </div>
+            <div class="card-icon">📊</div>
 
-            <h3>
-                Data Analytics
-            </h3>
+            <h3>Data Analytics</h3>
 
             <p>
                 Learn data cleaning, EDA,
@@ -242,11 +935,11 @@
             </p>
 
             <p>
-                Excel • Python • Statistics • Visualization
+                Python • Statistics • Visualization
             </p>
 
             <button
-                class="course-button"
+                class="details-btn"
                 onclick="openCourse('analytics')"
             >
                 View Details
@@ -259,25 +952,21 @@
 
         <div class="card">
 
-            <div class="card-icon">
-                🗄️
-            </div>
+            <div class="card-icon">🗄️</div>
 
-            <h3>
-                SQL & Database
-            </h3>
+            <h3>SQL & Database</h3>
 
             <p>
                 Learn SQL for data analysis
-                and database applications.
+                and real-world database applications.
             </p>
 
             <p>
-                Queries • Joins • Subqueries • Aggregation
+                Queries • Joins • CTEs • Window Functions
             </p>
 
             <button
-                class="course-button"
+                class="details-btn"
                 onclick="openCourse('sql')"
             >
                 View Details
@@ -290,13 +979,9 @@
 
         <div class="card">
 
-            <div class="card-icon">
-                📈
-            </div>
+            <div class="card-icon">📈</div>
 
-            <h3>
-                Power BI
-            </h3>
+            <h3>Power BI</h3>
 
             <p>
                 Build interactive dashboards
@@ -308,7 +993,7 @@
             </p>
 
             <button
-                class="course-button"
+                class="details-btn"
                 onclick="openCourse('powerbi')"
             >
                 View Details
@@ -321,17 +1006,13 @@
 
         <div class="card">
 
-            <div class="card-icon">
-                🤖
-            </div>
+            <div class="card-icon">🤖</div>
 
-            <h3>
-                Machine Learning
-            </h3>
+            <h3>Machine Learning</h3>
 
             <p>
-                Build and evaluate machine
-                learning models.
+                Build and evaluate practical
+                machine learning models.
             </p>
 
             <p>
@@ -339,7 +1020,7 @@
             </p>
 
             <button
-                class="course-button"
+                class="details-btn"
                 onclick="openCourse('ml')"
             >
                 View Details
@@ -352,67 +1033,27 @@
 
         <div class="card">
 
-            <div class="card-icon">
-                🧠
-            </div>
+            <div class="card-icon">🧠</div>
 
-            <h3>
-                Generative AI
-            </h3>
+            <h3>Generative AI</h3>
 
             <p>
-                Learn modern LLM and
-                Generative AI application development.
+                Learn LLMs, Prompt Engineering,
+                RAG and AI application development.
             </p>
 
             <p>
-                Prompting • RAG • LLMs • LangChain
+                LLMs • RAG • LangChain • LangGraph
             </p>
 
             <button
-                class="course-button"
+                class="details-btn"
                 onclick="openCourse('genai')"
             >
                 View Details
             </button>
 
         </div>
-
-
-        <!-- FEATURED WEEKEND PROGRAM -->
-
-        <div class="card featured-course">
-
-            <div class="card-icon">
-                🎓
-            </div>
-
-            <div class="featured-label">
-                FEATURED
-            </div>
-
-            <h3>
-                Data Science & Machine Learning
-            </h3>
-
-            <p>
-                Weekend Online Program for
-                aspiring Data Scientists.
-            </p>
-
-            <p>
-                12 Weeks • 48 Hours • Projects
-            </p>
-
-            <button
-                class="course-button"
-                onclick="openCourse('weekend')"
-            >
-                View Program
-            </button>
-
-        </div>
-
 
     </div>
 
@@ -424,22 +1065,16 @@
      SCHOOL TUITION
 ===================================================== -->
 
-<section
-    class="section tuition"
-    id="tuition"
->
+<section class="section tuition" id="tuition">
 
-    <h2>
-        School Tuition – Classes 10 & 12
-    </h2>
+    <h2>School Tuition</h2>
 
     <div class="section-title-line"></div>
 
     <p class="section-intro">
 
         Concept-based academic support with regular
-        practice, problem solving, revision and
-        examination preparation.
+        practice, problem solving and exam preparation.
 
     </p>
 
@@ -447,747 +1082,48 @@
     <div class="cards">
 
 
-        <!-- CLASS 10 MATHEMATICS -->
+        <div class="tuition-box">
+
+            <h3>Classes 6 – 10</h3>
+
+            <ul>
+
+                <li>✓ Mathematics</li>
+
+                <li>✓ Science</li>
+
+                <li>✓ Computer Science</li>
+
+                <li>✓ Concept Clarification</li>
+
+                <li>✓ Regular Practice</li>
+
+                <li>✓ Exam Preparation</li>
+
+            </ul>
+
+        </div>
+
 
         <div class="tuition-box">
 
-            <div class="card-icon">
-                📐
-            </div>
-
-            <h3>
-                Class 10 Mathematics
-            </h3>
+            <h3>Classes 11 – 12</h3>
 
             <ul>
 
-                <li>
-                    ✓ Real Numbers
-                </li>
+                <li>✓ Mathematics</li>
 
-                <li>
-                    ✓ Polynomials
-                </li>
+                <li>✓ Physics</li>
 
-                <li>
-                    ✓ Pair of Linear Equations
-                </li>
+                <li>✓ Chemistry</li>
 
-                <li>
-                    ✓ Quadratic Equations
-                </li>
+                <li>✓ Computer Science</li>
 
-                <li>
-                    ✓ Arithmetic Progressions
-                </li>
+                <li>✓ Problem Solving</li>
 
-                <li>
-                    ✓ Triangles
-                </li>
-
-                <li>
-                    ✓ Coordinate Geometry
-                </li>
-
-                <li>
-                    ✓ Trigonometry
-                </li>
-
-                <li>
-                    ✓ Applications of Trigonometry
-                </li>
-
-                <li>
-                    ✓ Circles
-                </li>
-
-                <li>
-                    ✓ Areas and Volumes
-                </li>
-
-                <li>
-                    ✓ Statistics
-                </li>
-
-                <li>
-                    ✓ Probability
-                </li>
-
-                <li>
-                    ✓ Previous Year Questions
-                </li>
-
-                <li>
-                    ✓ Weekly Tests & Revision
-                </li>
+                <li>✓ Board Exam Preparation</li>
 
             </ul>
-
-        </div>
-
-
-        <!-- CLASS 10 SCIENCE -->
-
-        <div class="tuition-box">
-
-            <div class="card-icon">
-                🔬
-            </div>
-
-            <h3>
-                Class 10 Science
-            </h3>
-
-            <ul>
-
-                <li>
-                    ✓ Physics Concepts
-                </li>
-
-                <li>
-                    ✓ Electricity
-                </li>
-
-                <li>
-                    ✓ Light & Optics
-                </li>
-
-                <li>
-                    ✓ Chemical Reactions
-                </li>
-
-                <li>
-                    ✓ Acids, Bases & Salts
-                </li>
-
-                <li>
-                    ✓ Metals & Non-Metals
-                </li>
-
-                <li>
-                    ✓ Carbon Compounds
-                </li>
-
-                <li>
-                    ✓ Life Processes
-                </li>
-
-                <li>
-                    ✓ Heredity & Evolution
-                </li>
-
-                <li>
-                    ✓ Environment
-                </li>
-
-                <li>
-                    ✓ Important Questions
-                </li>
-
-                <li>
-                    ✓ Board Exam Practice
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- CLASS 12 MATHEMATICS -->
-
-        <div class="tuition-box">
-
-            <div class="card-icon">
-                📊
-            </div>
-
-            <h3>
-                Class 12 Mathematics
-            </h3>
-
-            <ul>
-
-                <li>
-                    ✓ Relations & Functions
-                </li>
-
-                <li>
-                    ✓ Inverse Trigonometric Functions
-                </li>
-
-                <li>
-                    ✓ Matrices & Determinants
-                </li>
-
-                <li>
-                    ✓ Continuity & Differentiability
-                </li>
-
-                <li>
-                    ✓ Applications of Derivatives
-                </li>
-
-                <li>
-                    ✓ Integrals
-                </li>
-
-                <li>
-                    ✓ Applications of Integrals
-                </li>
-
-                <li>
-                    ✓ Differential Equations
-                </li>
-
-                <li>
-                    ✓ Vector Algebra
-                </li>
-
-                <li>
-                    ✓ Three Dimensional Geometry
-                </li>
-
-                <li>
-                    ✓ Probability
-                </li>
-
-                <li>
-                    ✓ Important Board Problems
-                </li>
-
-                <li>
-                    ✓ Previous Year Questions
-                </li>
-
-                <li>
-                    ✓ Model Examinations
-                </li>
-
-                <li>
-                    ✓ Intensive Revision
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- CLASS 12 PHYSICS -->
-
-        <div class="tuition-box">
-
-            <div class="card-icon">
-                ⚡
-            </div>
-
-            <h3>
-                Class 12 Physics
-            </h3>
-
-            <ul>
-
-                <li>
-                    ✓ Electrostatics
-                </li>
-
-                <li>
-                    ✓ Current Electricity
-                </li>
-
-                <li>
-                    ✓ Magnetism
-                </li>
-
-                <li>
-                    ✓ Electromagnetic Induction
-                </li>
-
-                <li>
-                    ✓ Alternating Current
-                </li>
-
-                <li>
-                    ✓ Electromagnetic Waves
-                </li>
-
-                <li>
-                    ✓ Ray & Wave Optics
-                </li>
-
-                <li>
-                    ✓ Dual Nature
-                </li>
-
-                <li>
-                    ✓ Atoms & Nuclei
-                </li>
-
-                <li>
-                    ✓ Semiconductor Electronics
-                </li>
-
-                <li>
-                    ✓ Important Derivations
-                </li>
-
-                <li>
-                    ✓ Numerical Practice
-                </li>
-
-                <li>
-                    ✓ Board Exam Preparation
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- CLASS 12 CHEMISTRY -->
-
-        <div class="tuition-box">
-
-            <div class="card-icon">
-                🧪
-            </div>
-
-            <h3>
-                Class 12 Chemistry
-            </h3>
-
-            <ul>
-
-                <li>
-                    ✓ Physical Chemistry
-                </li>
-
-                <li>
-                    ✓ Solutions
-                </li>
-
-                <li>
-                    ✓ Electrochemistry
-                </li>
-
-                <li>
-                    ✓ Chemical Kinetics
-                </li>
-
-                <li>
-                    ✓ Surface Chemistry
-                </li>
-
-                <li>
-                    ✓ Organic Chemistry
-                </li>
-
-                <li>
-                    ✓ Haloalkanes & Haloarenes
-                </li>
-
-                <li>
-                    ✓ Alcohols & Phenols
-                </li>
-
-                <li>
-                    ✓ Aldehydes & Ketones
-                </li>
-
-                <li>
-                    ✓ Amines
-                </li>
-
-                <li>
-                    ✓ Inorganic Chemistry
-                </li>
-
-                <li>
-                    ✓ Important Reactions
-                </li>
-
-                <li>
-                    ✓ Numerical Practice
-                </li>
-
-                <li>
-                    ✓ Board Revision
-                </li>
-
-            </ul>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="tuition-note">
-
-        <strong>
-            Academic Support Includes:
-        </strong>
-
-        Concept Clarification • Practice Worksheets •
-        Weekly Tests • Revision • Previous Year Questions •
-        Model Examinations
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WEEKEND PROGRAM
-===================================================== -->
-
-<section
-    class="section weekend-program-section"
-    id="weekend-program"
->
-
-    <h2>
-        Weekend Data Science & Machine Learning Program
-    </h2>
-
-    <div class="section-title-line"></div>
-
-    <p class="section-intro">
-
-        A structured practical program covering
-        Python, Data Analytics, Statistics,
-        Machine Learning and project development.
-
-    </p>
-
-
-    <div class="weekend-container">
-
-
-        <div class="weekend-badge">
-            🎓 WEEKEND ONLINE PROGRAM
-        </div>
-
-
-        <div class="weekend-info">
-
-
-            <div>
-
-                <strong>
-                    Duration
-                </strong>
-
-                <span>
-                    12 Weeks
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    Training
-                </strong>
-
-                <span>
-                    48 Hours
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    Schedule
-                </strong>
-
-                <span>
-                    Saturday & Sunday
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    Session
-                </strong>
-
-                <span>
-                    2 Hours / Day
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    Mode
-                </strong>
-
-                <span>
-                    Online
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    Projects
-                </strong>
-
-                <span>
-                    Mini Projects + Capstone
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-        <h3 class="curriculum-heading">
-            Program Curriculum
-        </h3>
-
-
-        <div class="curriculum">
-
-
-            <div class="curriculum-row heading">
-
-                <div>
-                    Module
-                </div>
-
-                <div>
-                    Topics
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 1
-                </div>
-
-                <div>
-                    Python Programming Fundamentals
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 2
-                </div>
-
-                <div>
-                    NumPy & Pandas
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 3
-                </div>
-
-                <div>
-                    Data Cleaning & Preparation
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 4
-                </div>
-
-                <div>
-                    Statistics for Data Science
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 5
-                </div>
-
-                <div>
-                    Exploratory Data Analysis
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 6
-                </div>
-
-                <div>
-                    Data Visualization
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 7
-                </div>
-
-                <div>
-                    Machine Learning Fundamentals
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 8
-                </div>
-
-                <div>
-                    Regression
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 9
-                </div>
-
-                <div>
-                    Classification
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 10
-                </div>
-
-                <div>
-                    Feature Engineering & Model Evaluation
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 11
-                </div>
-
-                <div>
-                    Unsupervised Learning & Clustering
-                </div>
-
-            </div>
-
-
-            <div class="curriculum-row">
-
-                <div>
-                    Module 12
-                </div>
-
-                <div>
-                    End-to-End Machine Learning Capstone
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="program-projects">
-
-            <h3>
-                Practical Projects
-            </h3>
-
-            <ul>
-
-                <li>
-                    ✓ Sales / Price Prediction
-                </li>
-
-                <li>
-                    ✓ Customer Churn Prediction
-                </li>
-
-                <li>
-                    ✓ Customer Segmentation
-                </li>
-
-                <li>
-                    ✓ End-to-End Machine Learning Capstone
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="program-actions">
-
-            <a
-                class="btn"
-                href="documents/Nexora-Brochure.pdf"
-                target="_blank"
-            >
-                📄 View Brochure
-            </a>
-
-
-            <a
-                class="btn btn-dark"
-                href="documents/Nexora-Brochure.pdf"
-                download
-            >
-                Download Brochure
-            </a>
-
-
-            <a
-                class="btn btn-green"
-                href="#admission"
-            >
-                🎓 Enquire Now
-            </a>
 
         </div>
 
@@ -1201,22 +1137,16 @@
      PROJECTS
 ===================================================== -->
 
-<section
-    class="section projects"
-    id="projects"
->
+<section class="section projects" id="projects">
 
-    <h2>
-        Learn Through Real Projects
-    </h2>
+    <h2>Sample Projects</h2>
 
     <div class="section-title-line"></div>
 
     <p class="section-intro">
 
-        Students don't just learn theory.
-        They build practical projects using
-        real-world datasets and tools.
+        Learn by building practical projects using
+        real-world datasets, tools and workflows.
 
     </p>
 
@@ -1224,46 +1154,72 @@
     <div class="cards">
 
 
-        <!-- PROJECT 1 -->
+        <!-- SAMPLE PROJECT -->
 
         <div class="project-card">
 
+            <div class="card-icon">
+                📊
+            </div>
+
             <h3>
-                Student Performance Prediction
+                Sample Project
             </h3>
+
+            <h4>
+                Student Performance Prediction
+            </h4>
 
             <p>
 
-                Predict students who may be academically
-                at risk using attendance, study hours,
-                previous marks and assignment scores.
+                An end-to-end Data Science project
+                that predicts student academic performance
+                using attendance, study hours, previous marks,
+                assignment scores and other relevant factors.
 
             </p>
 
+
             <div class="project-tech">
 
-                <strong>
-                    Technologies:
-                </strong>
+                <strong>Technologies:</strong><br>
 
-                Python • Pandas • Scikit-learn • Streamlit
+                Python • Pandas • NumPy • EDA •
+                Scikit-learn • Machine Learning • Streamlit
 
             </div>
 
+
+            <p>
+
+                <strong>Project Flow:</strong><br>
+
+                Data Collection → Data Cleaning →
+                EDA → Feature Engineering →
+                Machine Learning → Evaluation →
+                Deployment
+
+            </p>
+
+
             <a
                 class="project-link"
-                href="projects/Student-Performance-Prediction.zip"
+                href="projects/Student-Performance-Prediction.docx"
                 download
             >
-                Download Code
+                📄 Download Sample Project
             </a>
 
         </div>
 
 
-        <!-- PROJECT 2 -->
+        <!-- SALES PROJECT -->
 
         <div class="project-card">
+
+            <div class="card-icon">
+                📈
+            </div>
 
             <h3>
                 Sales Analytics Dashboard
@@ -1277,29 +1233,33 @@
 
             </p>
 
+
             <div class="project-tech">
 
-                <strong>
-                    Technologies:
-                </strong>
+                <strong>Technologies:</strong><br>
 
                 Excel • SQL • Power BI • DAX
 
             </div>
 
+
             <a
                 class="project-link"
                 href="#contact"
             >
-                Enquire
+                Enquire About Project
             </a>
 
         </div>
 
 
-        <!-- PROJECT 3 -->
+        <!-- CHURN -->
 
         <div class="project-card">
+
+            <div class="card-icon">
+                🔍
+            </div>
 
             <h3>
                 Customer Churn Prediction
@@ -1307,35 +1267,38 @@
 
             <p>
 
-                Identify customers who are likely
-                to discontinue a service using
-                machine learning.
+                Identify customers who may discontinue
+                a service using machine learning.
 
             </p>
 
+
             <div class="project-tech">
 
-                <strong>
-                    Technologies:
-                </strong>
+                <strong>Technologies:</strong><br>
 
-                Python • Pandas • ML • Visualization
+                Python • Pandas • Machine Learning
 
             </div>
+
 
             <a
                 class="project-link"
                 href="#contact"
             >
-                Enquire
+                Enquire About Project
             </a>
 
         </div>
 
 
-        <!-- PROJECT 4 -->
+        <!-- RAG PROJECT -->
 
         <div class="project-card">
+
+            <div class="card-icon">
+                🧠
+            </div>
 
             <h3>
                 AI Knowledge Assistant
@@ -1344,66 +1307,29 @@
             <p>
 
                 Build an AI assistant that answers
-                questions from uploaded documents
-                using Retrieval-Augmented Generation.
+                questions from documents using
+                Retrieval-Augmented Generation.
 
             </p>
 
+
             <div class="project-tech">
 
-                <strong>
-                    Technologies:
-                </strong>
+                <strong>Technologies:</strong><br>
 
                 Python • RAG • Vector DB • LLM
 
             </div>
 
+
             <a
                 class="project-link"
                 href="#contact"
             >
-                Enquire
+                Enquire About Project
             </a>
 
         </div>
-
-
-        <!-- PROJECT 5 -->
-
-        <div class="project-card">
-
-            <h3>
-                Sales / Price Prediction
-            </h3>
-
-            <p>
-
-                Build a regression model to predict
-                sales or prices using historical data.
-
-            </p>
-
-            <div class="project-tech">
-
-                <strong>
-                    Technologies:
-                </strong>
-
-                Python • Pandas • Scikit-learn
-
-            </div>
-
-            <a
-                class="project-link"
-                href="documents/Nexora-Sample-Project-Sales-Price-Prediction.docx"
-                download
-            >
-                Download Sample Project
-            </a>
-
-        </div>
-
 
     </div>
 
@@ -1415,22 +1341,16 @@
      FEES
 ===================================================== -->
 
-<section
-    class="section"
-    id="fees"
->
+<section class="section" id="fees">
 
-    <h2>
-        Sample Course Fees
-    </h2>
+    <h2>Sample Course Fees</h2>
 
     <div class="section-title-line"></div>
 
     <p class="section-intro">
 
-        Affordable, practical programs.
-        Final fees can be customized based on
-        batch size, duration and course structure.
+        Affordable programs with practical,
+        hands-on learning.
 
     </p>
 
@@ -1512,46 +1432,13 @@
 
         </div>
 
-
-        <div class="fee-card featured-fee">
-
-            <h3>
-                Weekend Data Science & ML
-            </h3>
-
-            <div class="price">
-                Enquire
-            </div>
-
-            <p>
-                12 Weeks
-            </p>
-
-            <p>
-                48 Live Hours
-            </p>
-
-            <p>
-                Projects + Capstone
-            </p>
-
-            <a
-                class="btn"
-                href="#admission"
-            >
-                Enquire
-            </a>
-
-        </div>
-
-
     </div>
 
 
     <p class="fee-note">
 
         *Fees shown are indicative.
-        Contact us for current batch fees and offers.
+        Contact us for current batch fees.
 
     </p>
 
@@ -1560,16 +1447,12 @@
 
 
 <!-- =====================================================
-     WHY NEXORA
+     WHY CHOOSE NEXORA
 ===================================================== -->
 
-<section
-    class="section why-section"
->
+<section class="section why-section">
 
-    <h2>
-        Why Choose Nexora?
-    </h2>
+    <h2>Why Choose Nexora?</h2>
 
     <div class="section-title-line"></div>
 
@@ -1612,8 +1495,8 @@
             </h3>
 
             <p>
-                Better interaction,
-                guidance and personal attention.
+                Better interaction and
+                personal attention.
             </p>
 
         </div>
@@ -1626,7 +1509,7 @@
             </h3>
 
             <p>
-                Curriculum designed around
+                Curriculum aligned with
                 practical industry requirements.
             </p>
 
@@ -1641,11 +1524,10 @@
 
             <p>
                 Structured learning from
-                fundamentals to advanced topics.
+                fundamentals to advanced concepts.
             </p>
 
         </div>
-
 
     </div>
 
@@ -1654,19 +1536,47 @@
 
 
 <!-- =====================================================
-     ABOUT
+     ABOUT / FOUNDER
 ===================================================== -->
 
-<section
-    class="section about"
-    id="about"
->
+<section class="section about" id="about">
 
     <h2>
-        About Nexora
+        About Nexora Data & AI Academy
     </h2>
 
     <div class="section-title-line"></div>
+
+
+    <!-- FACULTY PROFILE -->
+
+    <div class="faculty-profile">
+
+        <h2>
+            Nithyalakshmi
+        </h2>
+
+        <div class="faculty-role">
+
+            Data Scientist | AI Strategist
+
+        </div>
+
+        <div class="qualification">
+
+            M.Sc. | M.Phil. | MBA (Data Analytics)
+
+        </div>
+
+        <p class="expertise">
+
+            Data Science • Machine Learning •
+            Generative AI • Python • Power BI •
+            Statistics • Data Analytics
+
+        </p>
+
+    </div>
 
 
     <div class="about-content">
@@ -1676,7 +1586,6 @@
             <strong>
                 Nexora Data & AI Academy
             </strong>
-
             focuses on practical and project-based
             learning in Data Science, Artificial
             Intelligence, Python, Power BI, SQL
@@ -1689,18 +1598,18 @@
 
             Our approach combines conceptual
             understanding, hands-on coding,
-            real-world datasets and project
-            development.
+            real-world datasets and practical
+            project development.
 
         </p>
 
 
         <p>
 
-            We also provide academic support for
-            school students through concept-based
-            learning, regular practice and
-            examination preparation.
+            We also provide academic support
+            for school students through
+            concept-based learning, regular
+            practice and examination preparation.
 
         </p>
 
@@ -1710,38 +1619,10 @@
             Our goal is simple:
 
             <strong>
-                Learn the concept →
-                Apply the concept →
-                Build the solution.
+                Learn the Concept → Apply the Concept
+                → Build the Solution
             </strong>
 
-        </p>
-
-    </div>
-
-
-    <!-- NAME AT THE BOTTOM -->
-
-    <div class="faculty-box">
-
-        <h3>
-            Nithyalakshmi
-        </h3>
-
-        <h4>
-            Data Scientist / AI Strategist
-        </h4>
-
-        <p>
-            <strong>
-                M.Sc., M.Phil., MBA (Data Analytics)
-            </strong>
-        </p>
-
-        <p>
-            Data Science • Machine Learning •
-            Generative AI • Python • Power BI •
-            SQL • Statistics • Data Analytics
         </p>
 
     </div>
@@ -1754,57 +1635,41 @@
      BROCHURE
 ===================================================== -->
 
-<section
-    class="section brochure"
->
+<section class="section brochure">
 
     <h2>
-        Explore Our Brochure
+        Academy Brochure
     </h2>
 
     <div class="section-title-line"></div>
 
     <p class="section-intro">
 
-        Get complete information about our courses,
-        curriculum, projects and training approach.
+        Explore our programs, curriculum,
+        projects and training approach.
 
     </p>
 
 
-    <div class="brochure-buttons">
+    <a
+        class="btn"
+        href="documents/Nexora-Brochure.pdf"
+        target="_blank"
+    >
 
-        <a
-            class="btn"
-            href="documents/Nexora-Brochure.pdf"
-            target="_blank"
-        >
-            📄 View Brochure
-        </a>
+        📄 View / Download Brochure
 
-
-        <a
-            class="btn btn-dark"
-            href="documents/Nexora-Brochure.pdf"
-            download
-        >
-            ⬇ Download Brochure
-        </a>
-
-    </div>
+    </a>
 
 </section>
 
 
 
 <!-- =====================================================
-     ADMISSION / DEMO
+     ADMISSION
 ===================================================== -->
 
-<section
-    class="section admission"
-    id="admission"
->
+<section class="section admission" id="admission">
 
     <h2>
         Join a Free Demo Class
@@ -1823,9 +1688,7 @@
     <div class="form-container">
 
 
-        <form
-            onsubmit="sendWhatsApp(event)"
-        >
+        <form onsubmit="sendWhatsApp(event)">
 
 
             <div class="form-group">
@@ -1876,23 +1739,11 @@
                     </option>
 
                     <option>
-                        Class 10 Mathematics
+                        School Tuition - Classes 6 to 10
                     </option>
 
                     <option>
-                        Class 10 Science
-                    </option>
-
-                    <option>
-                        Class 12 Mathematics
-                    </option>
-
-                    <option>
-                        Class 12 Physics
-                    </option>
-
-                    <option>
-                        Class 12 Chemistry
+                        School Tuition - Classes 11 to 12
                     </option>
 
                     <option>
@@ -1919,11 +1770,6 @@
                         Generative AI
                     </option>
 
-                    <option>
-                        Data Science & Machine Learning
-                        – Weekend Program
-                    </option>
-
                 </select>
 
             </div>
@@ -1935,9 +1781,7 @@
                     Preferred Batch
                 </label>
 
-                <select
-                    id="batch"
-                >
+                <select id="batch">
 
                     <option value="">
                         Select preferred batch
@@ -1986,7 +1830,9 @@
                 type="submit"
                 class="btn btn-green form-submit"
             >
+
                 📱 Send Enquiry on WhatsApp
+
             </button>
 
 
@@ -2002,10 +1848,7 @@
      CONTACT
 ===================================================== -->
 
-<section
-    class="section contact"
-    id="contact"
->
+<section class="section contact" id="contact">
 
     <h2>
         Contact Nexora
@@ -2014,38 +1857,22 @@
     <div class="section-title-line"></div>
 
 
-    <div class="contact-info">
-
-        <p>
-            📍
-            <strong>
-                Location:
-            </strong>
-
-            Madurai, Tamil Nadu
-        </p>
+    <p>
+        📍 <strong>Location:</strong>
+        Madurai, Tamil Nadu
+    </p>
 
 
-        <p>
-            📞
-            <strong>
-                Phone / WhatsApp:
-            </strong>
-
-            +918189968996
-        </p>
+    <p>
+        📞 <strong>Phone / WhatsApp:</strong>
+        +91 XXXXX XXXXX
+    </p>
 
 
-        <p>
-            📧
-            <strong>
-                Email:
-            </strong>
-
-            nithabi82@gmail.com
-        </p>
-
-    </div>
+    <p>
+        📧 <strong>Email:</strong>
+        your-email@example.com
+    </p>
 
 
     <div class="hero-buttons">
@@ -2053,18 +1880,22 @@
 
         <a
             class="btn btn-green"
-            href="https://wa.me/918189968996"
+            href="https://wa.me/91XXXXXXXXXX"
             target="_blank"
         >
-            WhatsApp Us
+
+            💬 WhatsApp Us
+
         </a>
 
 
         <a
             class="btn"
-            href="mailto:nithabi82@gmail.com"
+            href="mailto:your-email@example.com"
         >
-            Send Email
+
+            📧 Send Email
+
         </a>
 
 
@@ -2073,9 +1904,10 @@
             href="documents/Nexora-Brochure.pdf"
             target="_blank"
         >
-            View Brochure
-        </a>
 
+            📄 View Brochure
+
+        </a>
 
     </div>
 
@@ -2090,11 +1922,19 @@
 <footer>
 
     <p>
-
         <strong>
             NEXORA DATA & AI ACADEMY
         </strong>
+    </p>
 
+
+    <p>
+        Nithyalakshmi | Data Scientist | AI Strategist
+    </p>
+
+
+    <p>
+        M.Sc. | M.Phil. | MBA (Data Analytics)
     </p>
 
 
@@ -2124,11 +1964,13 @@
 
 <a
     class="whatsapp"
-    href="https://wa.me/918189968996"
+    href="https://wa.me/91XXXXXXXXXX"
     target="_blank"
-    title="Chat with Nexora on WhatsApp"
+    title="Chat with Nexora"
 >
+
     💬 WhatsApp
+
 </a>
 
 
@@ -2137,22 +1979,22 @@
      COURSE DETAILS MODAL
 ===================================================== -->
 
-<div
-    id="courseModal"
-    class="modal"
->
+<div id="courseModal" class="modal">
 
     <div class="modal-content">
 
         <button
-            class="modal-close"
+            class="close-btn"
             onclick="closeCourse()"
         >
             ×
         </button>
 
-        <div id="courseDetails">
-        </div>
+
+        <h2 id="courseTitle"></h2>
+
+
+        <div id="courseDetails"></div>
 
     </div>
 
@@ -2167,933 +2009,474 @@
 <script>
 
 
-const courseData = {
+    /* ============================
+       COURSE DETAILS
+    ============================ */
 
 
-    python: {
+    const courses = {
 
-        title:
-            "Python Programming",
 
-        html: `
+        python: {
 
-            <h2>
-                Python Programming
-            </h2>
+            title: "Python Programming",
 
-            <p>
-                Build a strong foundation in Python
-                through practical coding exercises.
-            </p>
-
-            <h3>
-                Topics Covered
-            </h3>
-
-            <ul>
-
-                <li>
-                    Python Fundamentals
-                </li>
-
-                <li>
-                    Variables & Data Types
-                </li>
-
-                <li>
-                    Operators
-                </li>
-
-                <li>
-                    Conditional Statements
-                </li>
-
-                <li>
-                    Loops
-                </li>
-
-                <li>
-                    Functions
-                </li>
-
-                <li>
-                    Lists, Tuples, Sets & Dictionaries
-                </li>
-
-                <li>
-                    List Comprehensions
-                </li>
-
-                <li>
-                    Object-Oriented Programming
-                </li>
-
-                <li>
-                    Practical Coding Exercises
-                </li>
-
-            </ul>
-
-        `
-    },
-
-
-    analytics: {
-
-        title:
-            "Data Analytics",
-
-        html: `
-
-            <h2>
-                Data Analytics
-            </h2>
-
-            <p>
-                Learn how to transform raw data
-                into meaningful business insights.
-            </p>
-
-            <h3>
-                Topics Covered
-            </h3>
-
-            <ul>
-
-                <li>
-                    Excel for Data Analysis
-                </li>
-
-                <li>
-                    Data Cleaning
-                </li>
-
-                <li>
-                    SQL
-                </li>
-
-                <li>
-                    Statistics
-                </li>
-
-                <li>
-                    Python for Analytics
-                </li>
-
-                <li>
-                    NumPy & Pandas
-                </li>
-
-                <li>
-                    Exploratory Data Analysis
-                </li>
-
-                <li>
-                    Data Visualization
-                </li>
-
-                <li>
-                    Business Analytics
-                </li>
-
-            </ul>
-
-        `
-    },
-
-
-    sql: {
-
-        title:
-            "SQL & Database",
-
-        html: `
-
-            <h2>
-                SQL & Database
-            </h2>
-
-            <p>
-                Learn SQL from fundamentals
-                to practical data analysis.
-            </p>
-
-            <h3>
-                Topics Covered
-            </h3>
-
-            <ul>
-
-                <li>
-                    DBMS & RDBMS
-                </li>
-
-                <li>
-                    SQL Fundamentals
-                </li>
-
-                <li>
-                    SELECT Queries
-                </li>
-
-                <li>
-                    Filtering & Sorting
-                </li>
-
-                <li>
-                    Aggregate Functions
-                </li>
-
-                <li>
-                    GROUP BY & HAVING
-                </li>
-
-                <li>
-                    Joins
-                </li>
-
-                <li>
-                    Subqueries
-                </li>
-
-                <li>
-                    Window Functions
-                </li>
-
-                <li>
-                    Practical SQL Problems
-                </li>
-
-            </ul>
-
-        `
-    },
-
-
-    powerbi: {
-
-        title:
-            "Power BI",
-
-        html: `
-
-            <h2>
-                Power BI
-            </h2>
-
-            <p>
-                Learn to create interactive
-                dashboards and business reports.
-            </p>
-
-            <h3>
-                Topics Covered
-            </h3>
-
-            <ul>
-
-                <li>
-                    Power BI Fundamentals
-                </li>
-
-                <li>
-                    Power Query
-                </li>
-
-                <li>
-                    Data Profiling
-                </li>
-
-                <li>
-                    Data Cleaning
-                </li>
-
-                <li>
-                    Data Modelling
-                </li>
-
-                <li>
-                    Relationships
-                </li>
-
-                <li>
-                    DAX
-                </li>
-
-                <li>
-                    Calculated Columns
-                </li>
-
-                <li>
-                    Measures
-                </li>
-
-                <li>
-                    Interactive Visualizations
-                </li>
-
-                <li>
-                    Dashboard Design
-                </li>
-
-                <li>
-                    Row-Level Security
-                </li>
-
-            </ul>
-
-        `
-    },
-
-
-    ml: {
-
-        title:
-            "Machine Learning",
-
-        html: `
-
-            <h2>
-                Machine Learning
-            </h2>
-
-            <p>
-                Build predictive models using
-                real-world datasets.
-            </p>
-
-            <h3>
-                Topics Covered
-            </h3>
-
-            <ul>
-
-                <li>
-                    Machine Learning Fundamentals
-                </li>
-
-                <li>
-                    Data Preparation
-                </li>
-
-                <li>
-                    Supervised Learning
-                </li>
-
-                <li>
-                    Regression
-                </li>
-
-                <li>
-                    Classification
-                </li>
-
-                <li>
-                    Decision Trees
-                </li>
-
-                <li>
-                    Random Forest
-                </li>
-
-                <li>
-                    Unsupervised Learning
-                </li>
-
-                <li>
-                    Clustering
-                </li>
-
-                <li>
-                    Feature Engineering
-                </li>
-
-                <li>
-                    Model Evaluation
-                </li>
-
-                <li>
-                    Hyperparameter Tuning
-                </li>
-
-            </ul>
-
-        `
-    },
-
-
-    genai: {
-
-        title:
-            "Generative AI",
-
-        html: `
-
-            <h2>
-                Generative AI
-            </h2>
-
-            <p>
-                Learn how modern Generative AI
-                applications are designed and built.
-            </p>
-
-            <h3>
-                Topics Covered
-            </h3>
-
-            <ul>
-
-                <li>
-                    Generative AI Fundamentals
-                </li>
-
-                <li>
-                    Large Language Models
-                </li>
-
-                <li>
-                    Prompt Engineering
-                </li>
-
-                <li>
-                    Context Engineering
-                </li>
-
-                <li>
-                    RAG
-                </li>
-
-                <li>
-                    Vector Databases
-                </li>
-
-                <li>
-                    LangChain
-                </li>
-
-                <li>
-                    LangGraph
-                </li>
-
-                <li>
-                    AI Agents
-                </li>
-
-                <li>
-                    Agentic AI
-                </li>
-
-                <li>
-                    Practical AI Applications
-                </li>
-
-            </ul>
-
-        `
-    },
-
-
-    weekend: {
-
-        title:
-            "Weekend Data Science & Machine Learning Program",
-
-        html: `
-
-            <div class="modal-featured">
-
-                <div class="featured-label">
-                    FEATURED PROGRAM
-                </div>
-
-                <h2>
-                    Data Science & Machine Learning
-                </h2>
+            details: `
 
                 <p>
-                    Live Weekend Online Program
+                    <strong>Duration:</strong>
+                    6–8 Weeks
                 </p>
 
-            </div>
+                <p>
+                    <strong>Level:</strong>
+                    Beginner to Intermediate
+                </p>
 
+                <h3>
+                    Topics Covered
+                </h3>
 
-            <div class="modal-info">
+                <ul>
 
+                    <li>Python Fundamentals</li>
 
-                <div>
+                    <li>Variables and Data Types</li>
 
-                    <strong>
-                        Duration
-                    </strong>
+                    <li>Lists, Tuples, Sets and Dictionaries</li>
 
-                    <span>
-                        12 Weeks
-                    </span>
+                    <li>Conditional Statements</li>
 
-                </div>
+                    <li>Loops</li>
 
+                    <li>Functions</li>
 
-                <div>
+                    <li>Object-Oriented Programming</li>
 
-                    <strong>
-                        Training
-                    </strong>
+                    <li>Exception Handling</li>
 
-                    <span>
-                        48 Hours
-                    </span>
+                    <li>NumPy</li>
 
-                </div>
+                    <li>Pandas</li>
 
+                    <li>Data Visualization</li>
 
-                <div>
+                </ul>
 
-                    <strong>
-                        Schedule
-                    </strong>
+                <h3>
+                    Sample Project
+                </h3>
 
-                    <span>
-                        Saturday & Sunday
-                    </span>
+                <p>
+                    Student Performance Analytics
+                </p>
 
-                </div>
+            `
+        },
 
 
-                <div>
+        analytics: {
 
-                    <strong>
-                        Session
-                    </strong>
+            title: "Data Analytics",
 
-                    <span>
-                        2 Hours / Day
-                    </span>
+            details: `
 
-                </div>
+                <p>
+                    <strong>Duration:</strong>
+                    6–8 Weeks
+                </p>
 
+                <h3>
+                    Topics Covered
+                </h3>
 
-                <div>
+                <ul>
 
-                    <strong>
-                        Mode
-                    </strong>
+                    <li>Data Understanding</li>
 
-                    <span>
-                        Online
-                    </span>
+                    <li>Data Cleaning</li>
 
-                </div>
+                    <li>Missing Value Treatment</li>
 
+                    <li>Outlier Detection</li>
 
-                <div>
+                    <li>Exploratory Data Analysis</li>
 
-                    <strong>
-                        Projects
-                    </strong>
+                    <li>Descriptive Statistics</li>
 
-                    <span>
-                        Mini Projects + Capstone
-                    </span>
+                    <li>Data Visualization</li>
 
-                </div>
+                    <li>Business Analytics</li>
 
+                    <li>Data Storytelling</li>
 
-            </div>
+                </ul>
 
+                <h3>
+                    Tools
+                </h3>
 
-            <h3>
-                Program Curriculum
-            </h3>
+                <p>
+                    Python | Pandas | Matplotlib |
+                    Seaborn | Excel
+                </p>
 
+                <h3>
+                    Project
+                </h3>
 
-            <div class="curriculum">
+                <p>
+                    Sales Analytics and Business Intelligence
+                </p>
 
+            `
+        },
 
-                <div class="curriculum-row heading">
 
-                    <div>
-                        Module
-                    </div>
+        sql: {
 
-                    <div>
-                        Topics
-                    </div>
+            title: "SQL & Database",
 
-                </div>
+            details: `
 
+                <p>
+                    <strong>Duration:</strong>
+                    4–6 Weeks
+                </p>
 
-                <div class="curriculum-row">
+                <h3>
+                    Topics Covered
+                </h3>
 
-                    <div>
-                        1
-                    </div>
+                <ul>
 
-                    <div>
-                        Python Programming
-                    </div>
+                    <li>Database Fundamentals</li>
 
-                </div>
+                    <li>SELECT Statements</li>
 
+                    <li>Filtering and Sorting</li>
 
-                <div class="curriculum-row">
+                    <li>Aggregate Functions</li>
 
-                    <div>
-                        2
-                    </div>
+                    <li>GROUP BY and HAVING</li>
 
-                    <div>
-                        NumPy & Pandas
-                    </div>
+                    <li>Joins</li>
 
-                </div>
+                    <li>Subqueries</li>
 
+                    <li>Common Table Expressions</li>
 
-                <div class="curriculum-row">
+                    <li>Window Functions</li>
 
-                    <div>
-                        3
-                    </div>
+                    <li>SQL for Data Analytics</li>
 
-                    <div>
-                        Data Cleaning & Preparation
-                    </div>
+                </ul>
 
-                </div>
+                <h3>
+                    Project
+                </h3>
 
+                <p>
+                    Business Sales Analytics using SQL
+                </p>
 
-                <div class="curriculum-row">
+            `
+        },
 
-                    <div>
-                        4
-                    </div>
 
-                    <div>
-                        Statistics for Data Science
-                    </div>
+        powerbi: {
 
-                </div>
+            title: "Power BI",
 
+            details: `
 
-                <div class="curriculum-row">
+                <p>
+                    <strong>Duration:</strong>
+                    4–6 Weeks
+                </p>
 
-                    <div>
-                        5
-                    </div>
+                <h3>
+                    Topics Covered
+                </h3>
 
-                    <div>
-                        Exploratory Data Analysis
-                    </div>
+                <ul>
 
-                </div>
+                    <li>Power BI Fundamentals</li>
 
+                    <li>Power Query</li>
 
-                <div class="curriculum-row">
+                    <li>Data Profiling</li>
 
-                    <div>
-                        6
-                    </div>
+                    <li>Data Cleaning</li>
 
-                    <div>
-                        Data Visualization
-                    </div>
+                    <li>Data Transformation</li>
 
-                </div>
+                    <li>Data Modeling</li>
 
+                    <li>Relationships</li>
 
-                <div class="curriculum-row">
+                    <li>DAX</li>
 
-                    <div>
-                        7
-                    </div>
+                    <li>Calculated Columns</li>
 
-                    <div>
-                        Machine Learning Fundamentals
-                    </div>
+                    <li>Measures</li>
 
-                </div>
+                    <li>Interactive Dashboards</li>
 
+                    <li>Power BI Service</li>
 
-                <div class="curriculum-row">
+                </ul>
 
-                    <div>
-                        8
-                    </div>
+                <h3>
+                    Project
+                </h3>
 
-                    <div>
-                        Regression
-                    </div>
+                <p>
+                    Sales & Business Analytics Dashboard
+                </p>
 
-                </div>
+            `
+        },
 
 
-                <div class="curriculum-row">
+        ml: {
 
-                    <div>
-                        9
-                    </div>
+            title: "Machine Learning",
 
-                    <div>
-                        Classification
-                    </div>
+            details: `
 
-                </div>
+                <p>
+                    <strong>Duration:</strong>
+                    8–10 Weeks
+                </p>
 
+                <h3>
+                    Topics Covered
+                </h3>
 
-                <div class="curriculum-row">
+                <ul>
 
-                    <div>
-                        10
-                    </div>
+                    <li>Machine Learning Fundamentals</li>
 
-                    <div>
-                        Feature Engineering & Model Evaluation
-                    </div>
+                    <li>Data Preprocessing</li>
 
-                </div>
+                    <li>Feature Engineering</li>
 
+                    <li>Linear Regression</li>
 
-                <div class="curriculum-row">
+                    <li>Logistic Regression</li>
 
-                    <div>
-                        11
-                    </div>
+                    <li>Decision Trees</li>
 
-                    <div>
-                        Unsupervised Learning & Clustering
-                    </div>
+                    <li>Random Forest</li>
 
-                </div>
+                    <li>K-Means Clustering</li>
 
+                    <li>Model Evaluation</li>
 
-                <div class="curriculum-row">
+                    <li>Cross Validation</li>
 
-                    <div>
-                        12
-                    </div>
+                    <li>Hyperparameter Tuning</li>
 
-                    <div>
-                        End-to-End Machine Learning Capstone
-                    </div>
+                </ul>
 
-                </div>
+                <h3>
+                    Projects
+                </h3>
 
+                <p>
+                    Student Performance Prediction
+                    and Customer Churn Prediction
+                </p>
 
-            </div>
+            `
+        },
 
 
-            <h3>
-                Practical Projects
-            </h3>
+        genai: {
 
+            title: "Generative AI",
 
-            <ul>
+            details: `
 
-                <li>
-                    Sales / Price Prediction
-                </li>
+                <p>
+                    <strong>Duration:</strong>
+                    6–8 Weeks
+                </p>
 
-                <li>
-                    Customer Churn Prediction
-                </li>
+                <h3>
+                    Topics Covered
+                </h3>
 
-                <li>
-                    Customer Segmentation
-                </li>
+                <ul>
 
-                <li>
-                    End-to-End Machine Learning Capstone
-                </li>
+                    <li>Generative AI Fundamentals</li>
 
-            </ul>
+                    <li>Large Language Models</li>
 
+                    <li>Prompt Engineering</li>
 
-            <div class="modal-actions">
+                    <li>Context Engineering</li>
 
-                <a
-                    class="btn"
-                    href="documents/Nexora-Brochure.pdf"
-                    target="_blank"
-                >
-                    📄 View Brochure
-                </a>
+                    <li>Embeddings</li>
 
+                    <li>Vector Databases</li>
 
-                <a
-                    class="btn btn-dark"
-                    href="documents/Nexora-Brochure.pdf"
-                    download
-                >
-                    Download Brochure
-                </a>
+                    <li>Retrieval-Augmented Generation</li>
 
+                    <li>LangChain</li>
 
-                <a
-                    class="btn btn-green"
-                    href="#admission"
-                    onclick="closeCourse()"
-                >
-                    Enquire Now
-                </a>
+                    <li>LangGraph</li>
 
-            </div>
+                    <li>AI Application Development</li>
 
-        `
-    }
+                    <li>Streamlit Applications</li>
 
-};
+                </ul>
 
+                <h3>
+                    Project
+                </h3>
 
+                <p>
+                    AI Knowledge Assistant using RAG
+                </p>
 
-function openCourse(course) {
+            `
+        }
 
-    const modal =
-        document.getElementById("courseModal");
+    };
 
-    const details =
-        document.getElementById("courseDetails");
 
+    function openCourse(courseName) {
 
-    if (courseData[course]) {
+        const course = courses[courseName];
 
-        details.innerHTML =
-            courseData[course].html;
+        document.getElementById("courseTitle").innerHTML =
+            course.title;
 
-        modal.style.display =
-            "block";
+        document.getElementById("courseDetails").innerHTML =
+            course.details;
 
-        document.body.style.overflow =
-            "hidden";
+        document.getElementById("courseModal").style.display =
+            "flex";
 
     }
 
-}
 
+    function closeCourse() {
 
-
-function closeCourse() {
-
-    document.getElementById(
-        "courseModal"
-    ).style.display =
-        "none";
-
-    document.body.style.overflow =
-        "auto";
-
-}
-
-
-
-window.onclick = function(event) {
-
-    const modal =
-        document.getElementById("courseModal");
-
-    if (event.target === modal) {
-
-        closeCourse();
+        document.getElementById("courseModal").style.display =
+            "none";
 
     }
 
-};
 
+    window.onclick = function(event) {
 
+        const modal =
+            document.getElementById("courseModal");
 
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (event.key === "Escape") {
+        if (event.target === modal) {
 
             closeCourse();
 
         }
 
+    };
+
+
+    /* ============================
+       WHATSAPP FORM
+    ============================ */
+
+
+    function sendWhatsApp(event) {
+
+        event.preventDefault();
+
+
+        /*
+        IMPORTANT:
+
+        Replace 91XXXXXXXXXX below with
+        your actual WhatsApp number.
+
+        Example:
+
+        919876543210
+
+        Do not use:
+        +
+        spaces
+        hyphens
+        */
+
+
+        const academyNumber =
+            "91XXXXXXXXXX";
+
+
+        const name =
+            document.getElementById("name").value;
+
+
+        const phone =
+            document.getElementById("phone").value;
+
+
+        const course =
+            document.getElementById("course").value;
+
+
+        const batch =
+            document.getElementById("batch").value;
+
+
+        const message =
+            document.getElementById("message").value;
+
+
+        const whatsappMessage =
+
+            "Hello Nexora Data & AI Academy,%0A%0A" +
+
+            "*New Admission / Demo Enquiry*%0A%0A" +
+
+            "Name: " +
+            encodeURIComponent(name) +
+            "%0A" +
+
+            "Phone: " +
+            encodeURIComponent(phone) +
+            "%0A" +
+
+            "Program: " +
+            encodeURIComponent(course) +
+            "%0A" +
+
+            "Preferred Batch: " +
+            encodeURIComponent(batch) +
+            "%0A" +
+
+            "Message: " +
+            encodeURIComponent(message);
+
+
+        const whatsappURL =
+
+            "https://wa.me/" +
+            academyNumber +
+            "?text=" +
+            whatsappMessage;
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
     }
-);
-
-
-
-function sendWhatsApp(event) {
-
-    event.preventDefault();
-
-
-    const academyNumber =
-        "918189968996";
-
-
-    const name =
-        document.getElementById(
-            "name"
-        ).value;
-
-
-    const phone =
-        document.getElementById(
-            "phone"
-        ).value;
-
-
-    const course =
-        document.getElementById(
-            "course"
-        ).value;
-
-
-    const batch =
-        document.getElementById(
-            "batch"
-        ).value;
-
-
-    const message =
-        document.getElementById(
-            "message"
-        ).value;
-
-
-    const whatsappMessage =
-
-        "Hello Nexora Data & AI Academy,%0A%0A" +
-
-        "*New Admission / Demo Enquiry*%0A%0A" +
-
-        "Name: " +
-        encodeURIComponent(name) +
-        "%0A" +
-
-        "Phone: " +
-        encodeURIComponent(phone) +
-        "%0A" +
-
-        "Program: " +
-        encodeURIComponent(course) +
-        "%0A" +
-
-        "Preferred Batch: " +
-        encodeURIComponent(batch) +
-        "%0A" +
-
-        "Message: " +
-        encodeURIComponent(message);
-
-
-    const whatsappURL =
-
-        "https://wa.me/" +
-        academyNumber +
-        "?text=" +
-        whatsappMessage;
-
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
-}
 
 </script>
 
