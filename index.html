@@ -225,21 +225,23 @@
         ========================= */
 
         .cards {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(220px, 1fr));
             gap: 25px;
-            flex-wrap: wrap;
+            align-items: stretch;
         }
 
         .card {
             background: white;
-            width: 280px;
-            min-height: 235px;
+            width: 100%;
+            min-height: 260px;
             padding: 28px 22px;
             border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             transition: 0.3s;
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -667,6 +669,51 @@
 
 
         /* =========================
+           FEATURED BROCHURE PROGRAM
+        ========================= */
+
+        .featured-program-card {
+            position: relative;
+            border: 2px solid #f59e0b;
+            background: linear-gradient(145deg, #fffdf5, #eff6ff);
+            box-shadow: 0 8px 25px rgba(245,158,11,0.16);
+        }
+
+        .featured-program-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 12px 30px rgba(37,99,235,0.16);
+        }
+
+        .featured-label {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .program-meta {
+            color: #1d4ed8 !important;
+            font-weight: bold;
+        }
+
+        .brochure-mini-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #92400e;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .brochure-mini-link:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
            MOBILE
         ========================= */
 
@@ -892,6 +939,54 @@
 
 
     <div class="cards">
+
+
+        <!-- FEATURED BROCHURE-BASED PROGRAM -->
+
+        <div class="card featured-program-card">
+
+            <div class="featured-label">
+                ⭐ FEATURED • BROCHURE PROGRAM
+            </div>
+
+            <div class="card-icon">
+                📊
+            </div>
+
+            <h3>
+                Python & Data Analytics
+            </h3>
+
+            <p>
+                Weekend practical learning program
+                based on the Academy brochure.
+            </p>
+
+            <p class="program-meta">
+                📅 Weekend • 6–8 Weeks • Hands-on
+            </p>
+
+            <p>
+                Python • NumPy • Pandas • EDA •
+                Statistics • Visualization
+            </p>
+
+            <button
+                class="details-btn"
+                onclick="openCourse('weekend')"
+            >
+                View Details
+            </button>
+
+            <a
+                class="brochure-mini-link"
+                href="documents/Nexora-Brochure.pdf"
+                target="_blank"
+            >
+                📄 View Brochure
+            </a>
+
+        </div>
 
 
         <!-- PYTHON -->
@@ -1204,10 +1299,10 @@
 
             <a
                 class="project-link"
-                href="projects/Student-Performance-Prediction.docx"
+                href="documents/Student-Performance-Prediction.docx"
                 download
             >
-                📄 Download Sample Project
+                📄 Download Sample Project (DOCX)
             </a>
 
         </div>
@@ -1747,6 +1842,10 @@
                     </option>
 
                     <option>
+                        Python & Data Analytics - Weekend Brochure Program
+                    </option>
+
+                    <option>
                         Python Programming
                     </option>
 
@@ -1865,7 +1964,7 @@
 
     <p>
         📞 <strong>Phone / WhatsApp:</strong>
-        +91 XXXXX XXXXX
+        +91 81899 68996
     </p>
 
 
@@ -1880,7 +1979,7 @@
 
         <a
             class="btn btn-green"
-            href="https://wa.me/91XXXXXXXXXX"
+            href="https://wa.me/918189968996"
             target="_blank"
         >
 
@@ -1964,7 +2063,7 @@
 
 <a
     class="whatsapp"
-    href="https://wa.me/91XXXXXXXXXX"
+    href="https://wa.me/918189968996"
     target="_blank"
     title="Chat with Nexora"
 >
@@ -2069,6 +2168,76 @@
 
                 <p>
                     Student Performance Analytics
+                </p>
+
+            `
+        },
+
+
+        weekend: {
+
+            title: "Python & Data Analytics – Weekend Program",
+
+            details: `
+
+                <p><strong>Duration:</strong> 6–8 Weeks</p>
+                <p><strong>Mode:</strong> Weekend | Online / Offline</p>
+                <p><strong>Level:</strong> Beginner to Intermediate</p>
+
+                <h3>Program Overview</h3>
+
+                <p>
+                    A practical weekend program designed for beginners,
+                    students and working professionals to build strong
+                    foundations in Python and Data Analytics through
+                    hands-on exercises, real-world datasets and a guided project.
+                </p>
+
+                <h3>Topics Covered</h3>
+
+                <ul>
+                    <li>Python Fundamentals</li>
+                    <li>Variables and Data Types</li>
+                    <li>Conditional Statements and Loops</li>
+                    <li>Functions</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>NumPy</li>
+                    <li>Pandas</li>
+                    <li>Data Cleaning</li>
+                    <li>Exploratory Data Analysis (EDA)</li>
+                    <li>Descriptive Statistics</li>
+                    <li>Data Visualization</li>
+                    <li>Business Analytics</li>
+                    <li>Real-World Dataset Practice</li>
+                </ul>
+
+                <h3>Practical Learning</h3>
+
+                <ul>
+                    <li>Hands-on coding exercises</li>
+                    <li>Real-world datasets</li>
+                    <li>Assignments and practice tasks</li>
+                    <li>Guided mini project</li>
+                    <li>Project presentation</li>
+                </ul>
+
+                <h3>Sample Project</h3>
+                <p>Student Performance Analytics and Prediction</p>
+
+                <h3>Who Can Join?</h3>
+
+                <ul>
+                    <li>College Students</li>
+                    <li>Fresh Graduates</li>
+                    <li>Working Professionals</li>
+                    <li>Beginners interested in Data Analytics</li>
+                </ul>
+
+                <p>
+                    <strong>Brochure:</strong>
+                    <a href="documents/Nexora-Brochure.pdf" target="_blank">
+                        View Academy Brochure
+                    </a>
                 </p>
 
             `
@@ -2399,7 +2568,7 @@
         /*
         IMPORTANT:
 
-        Replace 91XXXXXXXXXX below with
+        Replace 918189968996 below with
         your actual WhatsApp number.
 
         Example:
@@ -2414,7 +2583,7 @@
 
 
         const academyNumber =
-            "91XXXXXXXXXX";
+            "918189968996";
 
 
         const name =
