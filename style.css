@@ -1,493 +1,159 @@
-/* ================================
-   GLOBAL
-================================ */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
-    color: #1e293b;
-    background: #f8fafc;
+    color: #333;
+    background: #fff;
 }
-
-a {
-    text-decoration: none;
-}
-
-button {
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-}
-
-
-/* ================================
-   HEADER
-================================ */
 
 header {
-    padding: 22px 20px;
+    padding: 20px;
     text-align: center;
-    background: #172554;
-    color: white;
-    border-bottom: 4px solid #06b6d4;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
 }
 
 .logo {
     width: 90px;
     height: 90px;
     object-fit: contain;
-    background: white;
-    border-radius: 12px;
-    padding: 5px;
 }
 
 .academy-name {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
-    margin-top: 8px;
+    color: #24527a;
 }
 
 .tagline {
-    color: #bae6fd;
-    font-size: 16px;
+    color: #666;
 }
 
-
-/* ================================
-   NAVIGATION
-================================ */
-
 nav {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 nav a {
-    margin: 5px 7px;
-    padding: 8px 14px;
+    margin: 8px 12px;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-    border-radius: 20px;
-    transition: 0.3s;
+    color: #24527a;
+    font-weight: 600;
 }
 
 nav a:hover {
-    background: #2563eb;
+    color: #e67e22;
 }
 
-
-/* ================================
-   HERO
-================================ */
-
 .hero {
-    padding: 90px 20px;
+    padding: 70px 20px;
     text-align: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #eff6ff,
-            #f5f3ff
-        );
+    background: #f5f9fc;
 }
 
 .hero h1 {
-    font-size: 44px;
-    color: #172554;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 23px;
-    color: #2563eb;
+    color: #24527a;
+    font-size: 40px;
 }
 
 .hero p {
-    max-width: 780px;
-    margin: 20px auto;
-    font-size: 18px;
-    color: #64748b;
+    max-width: 750px;
+    margin: auto;
+    color: #666;
 }
 
-
-/* ================================
-   SECTIONS
-================================ */
-
 section {
-    padding: 60px 10%;
+    padding: 50px 10%;
 }
 
 .section-title {
     text-align: center;
-    color: #172554;
-    font-size: 32px;
+    color: #24527a;
     margin-bottom: 10px;
 }
 
 .section-subtitle {
     text-align: center;
-    color: #64748b;
-    max-width: 750px;
-    margin: 0 auto 35px;
+    color: #666;
+    margin-bottom: 30px;
 }
-
-
-/* ================================
-   CARDS
-================================ */
 
 .cards {
     display: flex;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .card {
-    border: 1px solid #e2e8f0;
-    padding: 28px;
-    width: 280px;
-    min-height: 250px;
-    border-radius: 15px;
-    background: white;
-
-    box-shadow:
-        0 5px 20px rgba(15, 23, 42, 0.07);
-
-    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    padding: 25px;
+    width: 220px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-7px);
-
-    border-color: #93c5fd;
-
-    box-shadow:
-        0 12px 30px rgba(37, 99, 235, 0.15);
-}
-
-.card-icon {
-    font-size: 38px;
-    margin-bottom: 10px;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
 .card h3 {
-    color: #172554;
-    margin-bottom: 10px;
+    color: #24527a;
 }
 
 .card p {
-    color: #64748b;
+    color: #666;
 }
 
+.card-icon {
+    font-size: 32px;
+}
 
-/* ================================
-   PROGRAM BUTTON
-================================ */
-
-.program-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-
-    background: #2563eb;
-    color: white;
-
+button,
+.btn {
+    padding: 10px 20px;
     border: none;
-    border-radius: 7px;
-
+    border-radius: 5px;
+    cursor: pointer;
+    background: #24527a;
+    color: white;
     font-weight: bold;
-
-    transition: 0.3s;
 }
 
-.program-btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
+button:hover,
+.btn:hover {
+    background: #e67e22;
 }
-
-
-/* ================================
-   FEATURED BROCHURE PROGRAM
-================================ */
 
 .featured-program {
-    max-width: 950px;
-    margin: 40px auto;
-
-    padding: 35px;
-
-    background: white;
-
-    border: 2px solid #2563eb;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 10px 35px rgba(37, 99, 235, 0.12);
-
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 30px;
+    border: 2px solid #e67e22;
+    border-radius: 10px;
+    background: #fffaf5;
     text-align: center;
 }
 
-.featured-label {
-    display: inline-block;
-
-    padding: 6px 14px;
-
-    background: #7c3aed;
-
-    color: white;
-
-    border-radius: 20px;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    margin-bottom: 12px;
-}
-
 .featured-program h3 {
-    font-size: 30px;
-    color: #172554;
+    color: #24527a;
 }
-
-.featured-program p {
-    color: #64748b;
-}
-
-
-/* ================================
-   PROGRAM QUICK INFO
-================================ */
 
 .program-info {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .program-info span {
-    background: #eff6ff;
-
-    color: #1d4ed8;
-
-    padding: 9px 15px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-
-    font-weight: bold;
-}
-
-
-/* ================================
-   BUTTONS
-================================ */
-
-.btn {
     display: inline-block;
-
-    padding: 12px 22px;
-
-    margin: 6px;
-
-    border-radius: 7px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background: #2563eb;
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #1d4ed8;
-}
-
-.btn-secondary {
-    background: white;
-
-    color: #2563eb;
-
-    border: 2px solid #2563eb;
-}
-
-.btn-secondary:hover {
-    background: #2563eb;
-    color: white;
-}
-
-.btn-teal {
-    background: #06b6d4;
-    color: white;
-}
-
-.btn-teal:hover {
-    background: #0891b2;
-}
-
-
-/* ================================
-   MODAL / POPUP
-================================ */
-
-.modal {
-    display: none;
-
-    position: fixed;
-
-    z-index: 9999;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(15, 23, 42, 0.75);
-
-    padding: 30px;
-
-    overflow-y: auto;
-}
-
-.modal-content {
-    max-width: 850px;
-
-    margin: 30px auto;
-
-    background: white;
-
+    margin: 5px;
+    padding: 7px 12px;
     border-radius: 15px;
-
-    padding: 35px;
-
-    position: relative;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,0.25);
-
-    animation: popup 0.25s ease;
+    background: #eef5fa;
+    color: #24527a;
+    font-size: 14px;
 }
-
-@keyframes popup {
-
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.close {
-    position: absolute;
-
-    right: 20px;
-    top: 15px;
-
-    font-size: 30px;
-
-    color: #64748b;
-
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #ef4444;
-}
-
-.modal-content h2 {
-    color: #172554;
-    margin-bottom: 5px;
-}
-
-.modal-content h3 {
-    color: #2563eb;
-    margin-top: 25px;
-}
-
-.modal-content ul {
-    padding-left: 22px;
-}
-
-.modal-content li {
-    margin-bottom: 7px;
-}
-
-
-/* ================================
-   WEEKEND CURRICULUM
-================================ */
-
-.curriculum {
-    margin-top: 20px;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-}
-
-.curriculum-row {
-    display: grid;
-
-    grid-template-columns: 180px 1fr;
-
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.curriculum-row:last-child {
-    border-bottom: none;
-}
-
-.curriculum-row div {
-    padding: 13px;
-}
-
-.curriculum-header {
-    background: #172554;
-    color: white;
-    font-weight: bold;
-}
-
-.curriculum-row:not(.curriculum-header)
-div:first-child {
-    background: #eff6ff;
-    color: #1d4ed8;
-    font-weight: bold;
-}
-
-
-/* ================================
-   PROJECTS
-================================ */
 
 .projects {
     display: flex;
@@ -497,93 +163,93 @@ div:first-child {
 }
 
 .project-card {
-    width: 280px;
-
+    width: 250px;
     padding: 25px;
-
+    border: 1px solid #ddd;
+    border-radius: 10px;
     background: white;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 5px 18px rgba(15, 23, 42, 0.06);
 }
 
-.project-card h3 {
-    color: #172554;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    overflow-y: auto;
 }
 
-.project-card p {
-    color: #64748b;
-}
-
-
-/* ================================
-   DOCUMENTS
-================================ */
-
-.document-card {
-    text-align: center;
-}
-
-.document-card h3 {
-    color: #172554;
-}
-
-
-/* ================================
-   CONTACT
-================================ */
-
-.contact-box {
-    max-width: 700px;
-
-    margin: auto;
-
-    padding: 35px;
-
+.modal-content {
     background: white;
-
-    border-radius: 15px;
-
-    text-align: center;
-
-    box-shadow:
-        0 5px 20px rgba(15,23,42,0.07);
+    width: 80%;
+    max-width: 750px;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
 }
 
-.contact-box a {
-    color: #2563eb;
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #e67e22;
+}
+
+.curriculum {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.curriculum-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    border-bottom: 1px solid #ddd;
+}
+
+.curriculum-row div {
+    padding: 12px;
+}
+
+.curriculum-header {
+    background: #24527a;
+    color: white;
     font-weight: bold;
 }
 
-
-/* ================================
-   FOOTER
-================================ */
-
 footer {
-    padding: 35px;
-
+    padding: 30px;
     text-align: center;
-
-    background: #172554;
-
+    background: #24527a;
     color: white;
-
-    border-top: 4px solid #06b6d4;
 }
 
-footer strong {
-    color: #67e8f9;
+.trainer-box {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+    padding: 25px;
+    background: #f5f9fc;
+    border-radius: 10px;
 }
 
+.trainer-box h2 {
+    color: #24527a;
+}
 
-/* ================================
-   MOBILE
-================================ */
+.trainer-box h3 {
+    color: #e67e22;
+}
 
 @media (max-width: 768px) {
 
@@ -592,36 +258,29 @@ footer strong {
     }
 
     .hero h1 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     section {
-        padding: 45px 5%;
+        padding: 40px 5%;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
     }
 
     .curriculum-row {
         grid-template-columns: 1fr;
     }
 
-    .curriculum-header {
-        display: none;
+    nav a {
+        display: inline-block;
+        margin: 5px;
     }
-
-    .modal {
-        padding: 10px;
-    }
-
-    .modal-content {
-        padding: 25px 18px;
-        margin: 10px auto;
-    }
-
-    .btn {
-        display: block;
-        width: 90%;
-        max-width: 330px;
-        margin: 10px auto;
-        text-align: center;
-    }
-
 }
