@@ -1,17 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    color: #222;
-    background: #ffffff;
-}
-
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #1E293B;
+    background: #F8FAFC;
 }
 
 a {
@@ -24,45 +26,32 @@ a {
 ========================= */
 
 header {
-    padding: 20px;
+    padding: 22px 20px;
     text-align: center;
-    background: #f5f9ff;
-    border-bottom: 1px solid #ddd;
+    background: #172554;
+    color: white;
+    border-bottom: 4px solid #06B6D4;
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     object-fit: contain;
+    background: white;
+    border-radius: 14px;
+    padding: 5px;
     margin-bottom: 10px;
 }
 
 .academy-name {
     font-size: 32px;
     font-weight: bold;
-    color: #173f72;
+    color: white;
 }
 
 .tagline {
-    font-size: 17px;
-    color: #555;
-}
-
-.trainer-name {
-    margin-top: 12px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.trainer-role {
-    color: #2563eb;
     font-size: 16px;
-    font-weight: bold;
-}
-
-.trainer-qualification {
-    color: #555;
-    font-size: 15px;
+    color: #BAE6FD;
 }
 
 
@@ -75,17 +64,17 @@ nav {
 }
 
 nav a {
-    margin: 6px 10px;
-    text-decoration: none;
-    color: #173f72;
+    margin: 5px 7px;
+    padding: 8px 14px;
+    color: white;
     font-weight: bold;
     display: inline-block;
-    padding: 7px 12px;
-    border-radius: 5px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background: #173f72;
+    background: #2563EB;
     color: white;
 }
 
@@ -95,31 +84,42 @@ nav a:hover {
 ========================= */
 
 .hero {
-    padding: 80px 20px;
+    padding: 90px 20px;
     text-align: center;
-    background: linear-gradient(
-        135deg,
-        #eaf3ff,
-        #ffffff
-    );
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #DBEAFE,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #F8FAFC,
+            #EFF6FF
+        );
 }
 
 .hero h1 {
-    font-size: 44px;
-    color: #173f72;
+    font-size: 46px;
+    color: #172554;
     margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #2563EB;
 }
 
 .hero h2 {
     font-size: 24px;
-    color: #333;
+    color: #334155;
 }
 
 .hero p {
     max-width: 800px;
     margin: 20px auto;
     font-size: 18px;
-    color: #555;
+    color: #64748B;
 }
 
 
@@ -131,31 +131,42 @@ button,
 .btn {
     padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
     display: inline-block;
     margin: 7px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn-primary {
-    background: #173f72;
+    background: #2563EB;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #0e2c52;
+    background: #1D4ED8;
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
     background: white;
-    color: #173f72;
-    border: 2px solid #173f72;
+    color: #2563EB;
+    border: 2px solid #2563EB;
 }
 
 .btn-secondary:hover {
-    background: #173f72;
+    background: #2563EB;
     color: white;
+}
+
+.btn-teal {
+    background: #06B6D4;
+    color: white;
+}
+
+.btn-teal:hover {
+    background: #0891B2;
 }
 
 
@@ -164,7 +175,11 @@ button,
 ========================= */
 
 section {
-    padding: 50px 10%;
+    padding: 65px 10%;
+}
+
+section:nth-of-type(even) {
+    background: #F1F5F9;
 }
 
 .container {
@@ -174,66 +189,135 @@ section {
 
 .section-title {
     text-align: center;
-    color: #173f72;
-    font-size: 32px;
+    color: #172554;
+    font-size: 34px;
     margin-bottom: 10px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #2563EB,
+        #06B6D4
+    );
+    margin: 10px auto 20px;
+    border-radius: 5px;
 }
 
 .section-subtitle {
     text-align: center;
-    color: #666;
+    color: #64748B;
     max-width: 750px;
-    margin: 0 auto 30px;
+    margin: 0 auto 35px;
 }
 
 
 /* =========================
-   CARDS
+   PROGRAM CARDS
 ========================= */
 
 .cards {
     display: flex;
-    gap: 20px;
+    gap: 22px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .card {
-    border: 1px solid #ddd;
-    padding: 25px;
-    width: 220px;
-    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    padding: 28px;
+    width: 270px;
+    min-height: 230px;
+    border-radius: 14px;
     background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+    box-shadow:
+        0 6px 20px rgba(15, 23, 42, 0.07);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: #93C5FD;
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.15);
+}
+
+.card-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
 }
 
 .card h3 {
-    color: #173f72;
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #64748B;
 }
 
 
 /* =========================
-   PROGRAM CARD
+   FEATURED WEEKEND PROGRAM
 ========================= */
 
 .program-card {
     max-width: 950px;
-    margin: 30px auto;
-    padding: 35px;
-    border-radius: 12px;
+    margin: 35px auto;
+    padding: 40px;
+
     background: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+
+    border-radius: 18px;
+
+    border: 2px solid #BFDBFE;
+
+    box-shadow:
+        0 12px 35px rgba(37, 99, 235, 0.12);
+
+    position: relative;
+}
+
+.program-card::before {
+    content: "FEATURED WEEKEND PROGRAM";
+
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #7C3AED,
+        #2563EB
+    );
+
+    color: white;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
 }
 
 .program-card h3 {
-    font-size: 28px;
-    color: #173f72;
-    margin-bottom: 5px;
+    font-size: 30px;
+    color: #172554;
+    margin-bottom: 7px;
 }
 
 .program-type {
-    color: #666;
+    color: #2563EB;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -251,15 +335,23 @@ section {
 }
 
 .detail {
-    padding: 15px;
-    background: #f4f8fd;
-    border-radius: 7px;
-    border-left: 4px solid #173f72;
+    padding: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #EFF6FF,
+            #F8FAFC
+        );
+
+    border-radius: 9px;
+
+    border-left: 4px solid #2563EB;
 }
 
 .detail strong {
     display: block;
-    color: #173f72;
+    color: #172554;
 }
 
 
@@ -269,14 +361,17 @@ section {
 
 .learning-path {
     margin: 25px 0;
-    padding: 22px;
-    background: #f5f9ff;
-    border-left: 5px solid #173f72;
-    border-radius: 5px;
+    padding: 23px;
+
+    background: #F0FDFA;
+
+    border-left: 5px solid #06B6D4;
+
+    border-radius: 8px;
 }
 
 .learning-path h4 {
-    color: #173f72;
+    color: #0F766E;
     margin-bottom: 10px;
 }
 
@@ -287,15 +382,21 @@ section {
 
 .curriculum-table {
     margin-top: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 10px;
+
     overflow: hidden;
+
+    background: white;
 }
 
 .curriculum-row {
     display: grid;
     grid-template-columns: 220px 1fr;
-    border-bottom: 1px solid #ddd;
+
+    border-bottom: 1px solid #E2E8F0;
 }
 
 .curriculum-row:last-child {
@@ -307,16 +408,20 @@ section {
 }
 
 .curriculum-header {
-    background: #173f72;
+    background: #172554;
     color: white;
     font-weight: bold;
 }
 
 .curriculum-row:not(.curriculum-header)
 > div:first-child {
-    background: #f1f6fc;
-    color: #173f72;
+    background: #EFF6FF;
+    color: #1D4ED8;
     font-weight: bold;
+}
+
+.curriculum-row:not(.curriculum-header):hover {
+    background: #F8FAFC;
 }
 
 
@@ -327,27 +432,41 @@ section {
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 22px;
 }
 
 .project-card {
-    border: 1px solid #ddd;
-    padding: 25px;
-    border-radius: 10px;
-    background: #f8fbff;
+    border: 1px solid #E2E8F0;
+
+    padding: 28px;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.06);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #67E8F9;
 }
 
 .project-card h3 {
-    color: #173f72;
+    color: #172554;
 }
 
 .project-card p {
-    color: #555;
+    color: #64748B;
 }
 
 
 /* =========================
-   FEATURES
+   WHY NEXORA
 ========================= */
 
 .features {
@@ -357,15 +476,27 @@ section {
 }
 
 .feature {
-    padding: 25px;
+    padding: 28px;
+
     text-align: center;
-    background: #f5f8fc;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+
+    background: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #E2E8F0;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.05);
 }
 
 .feature h3 {
-    color: #173f72;
+    color: #2563EB;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #64748B;
 }
 
 
@@ -380,35 +511,65 @@ section {
 }
 
 .method-box {
-    padding: 25px;
+    padding: 28px;
     text-align: center;
-    background: #f5f8fc;
-    border-radius: 10px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    border-top: 4px solid #06B6D4;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.05);
 }
 
 .method-box h3 {
-    color: #173f72;
+    color: #172554;
 }
 
 .percentage {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
-    color: #173f72;
+    color: #7C3AED;
 }
 
 
 /* =========================
-   ABOUT
+   ABOUT / TRAINER
 ========================= */
 
 .about-box {
     max-width: 850px;
+
     margin: auto;
-    padding: 30px;
+
+    padding: 35px;
+
     text-align: center;
-    background: #f5f9ff;
-    border-radius: 10px;
-    color: #555;
+
+    background:
+        linear-gradient(
+            135deg,
+            #EFF6FF,
+            #F5F3FF
+        );
+
+    border-radius: 15px;
+
+    border: 1px solid #DBEAFE;
+}
+
+.about-box h2 {
+    color: #172554;
+}
+
+.about-box h3 {
+    color: #7C3AED;
+}
+
+.about-box p {
+    color: #64748B;
 }
 
 
@@ -417,14 +578,14 @@ section {
 ========================= */
 
 .fee {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: bold;
-    color: #173f72;
+    color: #173F72;
     margin-top: 20px;
 }
 
 .fee-note {
-    color: #777;
+    color: #64748B;
 }
 
 
@@ -434,21 +595,31 @@ section {
 
 .contact-box {
     max-width: 700px;
+
     margin: auto;
-    padding: 30px;
+
+    padding: 35px;
+
     text-align: center;
-    background: #f5f8fc;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+
+    background: white;
+
+    border-radius: 14px;
+
+    border: 1px solid #E2E8F0;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.08);
 }
 
 .contact-box p {
     font-size: 17px;
     margin: 8px;
+    color: #475569;
 }
 
 .contact-box a {
-    color: #173f72;
+    color: #2563EB;
     font-weight: bold;
 }
 
@@ -458,14 +629,23 @@ section {
 ========================= */
 
 footer {
-    padding: 30px;
+    padding: 35px 20px;
+
     text-align: center;
-    background: #173f72;
+
+    background: #172554;
+
     color: white;
+
+    border-top: 4px solid #06B6D4;
 }
 
 footer p {
-    margin: 5px;
+    margin: 6px;
+}
+
+footer strong {
+    color: #67E8F9;
 }
 
 
@@ -550,28 +730,24 @@ footer p {
         font-size: 14px;
     }
 
-    .trainer-name {
-        font-size: 18px;
-    }
-
     .hero {
         padding: 60px 15px;
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 29px;
     }
 
     section {
-        padding: 40px 5%;
+        padding: 45px 5%;
     }
 
     .program-card {
-        padding: 20px 15px;
+        padding: 22px 15px;
     }
 
     .section-title {
-        font-size: 27px;
+        font-size: 28px;
     }
 
 }
