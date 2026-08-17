@@ -1,896 +1,1669 @@
-/* ==========================================
-   GENERAL
-========================================== */
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     line-height: 1.6;
-    color: #333;
-    background: #ffffff;
+
+    color: #1f2937;
+
+    background: #f8fafc;
 }
+
 
 a {
     text-decoration: none;
 }
 
+
 button {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* ==========================================
-   HEADER
-========================================== */
-
-header {
-    padding: 22px 20px;
-    text-align: center;
-    background: #ffffff;
-    border-bottom: 1px solid #e2e2e2;
-}
-
-.header-content {
-    max-width: 1100px;
+.container {
+    max-width: 1200px;
     margin: auto;
 }
 
-.logo {
-    width: 85px;
-    height: 85px;
-    object-fit: contain;
-    margin-bottom: 5px;
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 14px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.15);
 }
 
-header h1 {
-    margin: 3px 0;
-    font-size: 30px;
-    color: #28547a;
+
+.logo-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.logo-container img {
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 8px;
+
+    padding: 4px;
+}
+
+
+.academy-name {
+
+    font-size: 19px;
+
+    font-weight: bold;
+
     letter-spacing: 0.5px;
 }
 
-.tagline {
-    margin: 0;
-    color: #777;
-    font-size: 15px;
+
+.tagline-small {
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+    margin-top: 2px;
 }
 
 
-/* ==========================================
+/* =====================================================
    NAVIGATION
-========================================== */
+===================================================== */
 
 nav {
-    margin-top: 18px;
-}
 
-nav a {
-    display: inline-block;
-    margin: 5px 8px;
-    padding: 6px 10px;
-
-    color: #28547a;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    border-radius: 5px;
-
-    transition: 0.2s;
-}
-
-nav a:hover {
-    background: #eef5fa;
-    color: #e67e22;
-}
-
-
-/* ==========================================
-   HERO
-========================================== */
-
-.hero {
-    padding: 75px 20px;
-
-    text-align: center;
-
-    background: #f5f9fc;
-}
-
-.hero-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.hero h2 {
-    margin: 0 0 15px;
-
-    font-size: 40px;
-
-    color: #28547a;
-}
-
-.hero p {
-    max-width: 700px;
-
-    margin: 0 auto 25px;
-
-    font-size: 17px;
-
-    color: #666;
-}
-
-.hero-buttons {
-    margin-top: 20px;
-}
-
-
-/* ==========================================
-   SECTIONS
-========================================== */
-
-section {
-    padding: 55px 8%;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.light-section {
-    background: #f8fafc;
-}
-
-.section-title {
-    margin: 0;
-
-    text-align: center;
-
-    color: #28547a;
-
-    font-size: 30px;
-}
-
-.section-description {
-    max-width: 750px;
-
-    margin: 10px auto 35px;
-
-    text-align: center;
-
-    color: #777;
-}
-
-
-/* ==========================================
-   BUTTONS
-========================================== */
-
-.btn {
-    display: inline-block;
-
-    padding: 10px 20px;
-
-    margin: 5px;
-
-    border-radius: 5px;
-
-    font-weight: 600;
-
-    transition: 0.2s;
-}
-
-.btn.primary {
-    background: #28547a;
-    color: #ffffff;
-}
-
-.btn.primary:hover {
-    background: #1f425f;
-}
-
-.btn.secondary {
-    background: #ffffff;
-    color: #28547a;
-    border: 1px solid #28547a;
-}
-
-.btn.secondary:hover {
-    background: #28547a;
-    color: white;
-}
-
-
-/* ==========================================
-   CARDS
-========================================== */
-
-.cards {
     display: flex;
+
+    align-items: center;
 
     flex-wrap: wrap;
 
     justify-content: center;
-
-    gap: 20px;
 }
 
-.card {
-    width: 260px;
 
-    padding: 25px;
+nav a {
 
-    background: #ffffff;
+    color: white;
 
-    border: 1px solid #dddddd;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 3px 10px rgba(0,0,0,0.05);
-
-    transition: 0.25s;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 7px 18px rgba(0,0,0,0.09);
-}
-
-.icon {
-    font-size: 34px;
-
-    margin-bottom: 8px;
-}
-
-.card h3 {
-    margin: 5px 0 10px;
-
-    color: #28547a;
-
-    font-size: 21px;
-}
-
-.card p {
-    color: #666;
-
-    font-size: 15px;
-}
-
-.card ul {
-    padding-left: 20px;
-
-    color: #666;
+    margin-left: 18px;
 
     font-size: 14px;
+
+    transition: 0.3s;
 }
 
-.card li {
-    margin-bottom: 4px;
+
+nav a:hover {
+
+    color: #60a5fa;
 }
 
 
-/* ==========================================
-   RESOURCE CARDS
-========================================== */
+/* =====================================================
+   HERO
+===================================================== */
 
-.resource-card {
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #eff6ff,
+            #ffffff
+        );
+
+    padding: 95px 20px;
+
     text-align: center;
 }
 
-.coming-soon {
-    margin-top: 15px;
 
-    color: #e67e22 !important;
+.hero-badge {
 
-    font-size: 13px !important;
+    display: inline-block;
 
-    font-weight: 600;
+    background: white;
+
+    color: #2563eb;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0,0,0,0.08);
 }
 
 
-/* ==========================================
-   PROGRAM CARDS
-========================================== */
+.hero h1 {
 
-.program-card {
-    min-height: 290px;
+    font-size: 50px;
+
+    line-height: 1.2;
+
+    color: #111827;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 span {
+
+    color: #2563eb;
+}
+
+
+.hero h2 {
+
+    font-size: 25px;
+
+    color: #374151;
+
+    margin-bottom: 18px;
+}
+
+
+.hero p {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    color: #4b5563;
+}
+
+
+.hero-buttons {
+
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    margin: 6px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    background: #2563eb;
+
+    color: white;
+
+    transition: 0.3s;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+.btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+.btn-dark {
+
+    background: #111827;
+}
+
+
+.btn-dark:hover {
+
+    background: #374151;
+}
+
+
+.btn-green {
+
+    background: #16a34a;
+}
+
+
+.btn-green:hover {
+
+    background: #15803d;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+
+    padding: 75px 7%;
+
+    text-align: center;
+}
+
+
+.section h2 {
+
+    font-size: 34px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+
+.section-title-line {
+
+    width: 60px;
+
+    height: 4px;
+
+    background: #2563eb;
+
+    margin: 0 auto 20px;
+
+    border-radius: 5px;
+}
+
+
+.section-intro {
+
+    max-width: 800px;
+
+    margin: 0 auto 40px;
+
+    color: #4b5563;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.card {
+
+    background: white;
+
+    width: 280px;
+
+    min-height: 250px;
+
+    padding: 30px 23px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+    text-align: center;
 
     display: flex;
 
     flex-direction: column;
 }
 
-.program-card .details-btn {
-    margin-top: auto;
+
+.card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.12);
 }
 
-.details-btn {
+
+.card-icon {
+
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+
+.card h3 {
+
+    font-size: 21px;
+
+    color: #2563eb;
+
+    margin-bottom: 12px;
+}
+
+
+.card p {
+
+    color: #4b5563;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   COURSE BUTTON
+===================================================== */
+
+.course-button {
+
+    margin-top: auto;
+
     padding: 10px 18px;
+
+    background: #2563eb;
+
+    color: white;
 
     border: none;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
-    background: #28547a;
-
-    color: white;
-
-    font-weight: 600;
+    font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.2s;
-}
-
-.details-btn:hover {
-    background: #e67e22;
+    transition: 0.3s;
 }
 
 
-/* ==========================================
-   WEEKEND PROGRAM
-========================================== */
+.course-button:hover {
 
-.weekend-program {
-    max-width: 900px;
+    background: #1d4ed8;
 
-    margin: 40px auto 0;
-
-    padding: 30px;
-
-    text-align: center;
-
-    background: #fffaf5;
-
-    border: 2px solid #e5a15b;
-
-    border-radius: 10px;
+    transform: translateY(-2px);
 }
 
-.featured {
+
+/* =====================================================
+   FEATURED COURSE
+===================================================== */
+
+.featured-course {
+
+    background:
+        linear-gradient(
+            145deg,
+            #eff6ff,
+            #ffffff
+        );
+
+    border: 2px solid #60a5fa;
+}
+
+
+.featured-label {
+
     display: inline-block;
 
-    padding: 5px 12px;
-
-    background: #e67e22;
+    background: #2563eb;
 
     color: white;
 
-    border-radius: 15px;
+    padding: 4px 10px;
 
-    font-size: 12px;
+    border-radius: 20px;
+
+    font-size: 11px;
 
     font-weight: bold;
-}
 
-.weekend-program h3 {
-    margin: 12px 0 3px;
-
-    color: #28547a;
-
-    font-size: 27px;
-}
-
-.weekend-subtitle {
-    color: #777;
-
-    margin-top: 0;
-}
-
-.quick-info {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin: 20px 0;
-}
-
-.quick-info span {
-    display: inline-block;
-
-    padding: 7px 12px;
-
-    background: #eef5fa;
-
-    color: #28547a;
-
-    border-radius: 15px;
-
-    font-size: 13px;
+    margin-bottom: 8px;
 }
 
 
-/* ==========================================
-   PROJECTS
-========================================== */
+/* =====================================================
+   SCHOOL TUITION
+===================================================== */
 
-.project-card {
-    min-height: 260px;
-}
+.tuition {
 
-.project-card .btn {
-    margin-top: 15px;
+    background: #eef2ff;
 }
 
 
-/* ==========================================
-   BROCHURE
-========================================== */
-
-.brochure-box {
-    max-width: 700px;
-
-    margin: auto;
-
-    padding: 35px;
-
-    text-align: center;
-
-    background: #f5f9fc;
-
-    border: 1px solid #dce6ee;
-
-    border-radius: 10px;
-}
-
-.brochure-box h2 {
-    color: #28547a;
-}
-
-.brochure-box p {
-    color: #666;
-}
-
-
-/* ==========================================
-   CONTACT
-========================================== */
-
-.contact-box {
-    max-width: 650px;
-
-    margin: auto;
-
-    padding: 30px;
-
-    text-align: center;
+.tuition-box {
 
     background: white;
 
-    border: 1px solid #ddd;
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 3px 12px rgba(0,0,0,0.05);
-}
-
-.contact-box p {
-    margin: 8px 0 2px;
-
-    color: #666;
-
-    font-weight: 600;
-}
-
-.contact-box > a:not(.btn) {
-    color: #28547a;
-}
-
-
-/* ==========================================
-   TRAINER
-========================================== */
-
-.trainer-box {
-    max-width: 650px;
-
-    margin: 30px auto 0;
+    width: 300px;
 
     padding: 30px;
 
-    text-align: center;
+    border-radius: 12px;
 
-    background: #f5f9fc;
+    box-shadow:
+        0 5px 18px
+        rgba(0,0,0,0.08);
 
-    border: 1px solid #dce6ee;
-
-    border-radius: 10px;
-}
-
-.trainer-box h2 {
-    margin-bottom: 5px;
-
-    color: #28547a;
-}
-
-.trainer-box h3 {
-    margin: 5px 0;
-
-    color: #e67e22;
-}
-
-.trainer-box p {
-    color: #666;
-
-    margin-top: 12px;
+    text-align: left;
 }
 
 
-/* ==========================================
-   FOOTER
-========================================== */
+.tuition-box h3 {
 
-footer {
-    padding: 30px 20px;
+    color: #2563eb;
+
+    margin-bottom: 15px;
 
     text-align: center;
-
-    background: #28547a;
-
-    color: white;
 }
 
-footer h3 {
-    margin-bottom: 5px;
+
+.tuition-box .card-icon {
+
+    text-align: center;
 }
 
-footer p {
-    margin: 5px;
+
+.tuition-box ul {
+
+    list-style: none;
+
+    padding: 0;
+}
+
+
+.tuition-box li {
+
+    padding: 6px 0;
+
+    border-bottom: 1px solid #eee;
+
+    color: #374151;
 
     font-size: 14px;
 }
 
 
-/* ==========================================
-   MODAL
-========================================== */
+.tuition-note {
 
-.modal {
-    display: none;
+    max-width: 900px;
 
-    position: fixed;
+    margin: 35px auto 0;
 
-    z-index: 9999;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    padding: 20px;
-
-    overflow-y: auto;
-
-    background:
-        rgba(0,0,0,0.55);
-}
-
-.modal-box {
-    position: relative;
-
-    max-width: 800px;
-
-    margin: 40px auto;
-
-    padding: 35px;
+    padding: 18px;
 
     background: white;
 
     border-radius: 10px;
 
+    color: #4b5563;
+
     box-shadow:
-        0 10px 40px rgba(0,0,0,0.25);
+        0 4px 15px
+        rgba(0,0,0,0.06);
 }
 
+
+/* =====================================================
+   WEEKEND PROGRAM
+===================================================== */
+
+.weekend-program-section {
+
+    background: white;
+}
+
+
+.weekend-container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    background: #f8fafc;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+
+    text-align: left;
+
+    border-top: 5px solid #2563eb;
+}
+
+
+.weekend-badge {
+
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+
+.weekend-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+.weekend-info div {
+
+    background: white;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    text-align: center;
+}
+
+
+.weekend-info strong {
+
+    display: block;
+
+    color: #2563eb;
+
+    margin-bottom: 5px;
+}
+
+
+.weekend-info span {
+
+    color: #4b5563;
+
+    font-size: 14px;
+}
+
+
+.curriculum-heading {
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+
+.curriculum {
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+
+
+.curriculum-row {
+
+    display: grid;
+
+    grid-template-columns:
+        160px 1fr;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.curriculum-row:last-child {
+
+    border-bottom: none;
+}
+
+
+.curriculum-row div {
+
+    padding: 12px 15px;
+
+    color: #4b5563;
+
+    background: white;
+
+    font-size: 14px;
+}
+
+
+.curriculum-row.heading div {
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+.curriculum-row:not(.heading)
+div:first-child {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-weight: bold;
+}
+
+
+.program-projects {
+
+    background: #eef2ff;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.program-projects h3 {
+
+    color: #2563eb;
+
+    margin-bottom: 12px;
+}
+
+
+.program-projects ul {
+
+    list-style: none;
+
+    padding: 0;
+}
+
+
+.program-projects li {
+
+    padding: 6px 0;
+
+    color: #374151;
+}
+
+
+.program-actions {
+
+    text-align: center;
+
+    padding-top: 10px;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects {
+
+    background: #f1f5f9;
+}
+
+
+.project-card {
+
+    background: white;
+
+    width: 300px;
+
+    padding: 28px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(0,0,0,0.08);
+
+    text-align: left;
+}
+
+
+.project-card h3 {
+
+    color: #2563eb;
+
+    margin-bottom: 12px;
+}
+
+
+.project-card p {
+
+    color: #4b5563;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.project-tech {
+
+    font-size: 13px;
+
+    color: #374151;
+
+    margin-bottom: 15px;
+}
+
+
+.project-link {
+
+    display: inline-block;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin-right: 10px;
+}
+
+
+.project-link:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   FEES
+===================================================== */
+
+.fee-card {
+
+    background: white;
+
+    width: 290px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0,0,0,0.08);
+}
+
+
+.fee-card h3 {
+
+    color: #2563eb;
+
+    margin-bottom: 10px;
+}
+
+
+.price {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #111827;
+
+    margin: 15px 0;
+}
+
+
+.fee-card p {
+
+    color: #4b5563;
+
+    font-size: 15px;
+
+    margin: 5px;
+}
+
+
+.fee-note {
+
+    margin-top: 30px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+.featured-fee {
+
+    border: 2px solid #2563eb;
+
+    background: #eff6ff;
+}
+
+
+/* =====================================================
+   WHY US
+===================================================== */
+
+.why-section {
+
+    background: #eef2ff;
+}
+
+
+.why-card {
+
+    background: white;
+
+    width: 230px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.06);
+}
+
+
+.why-card h3 {
+
+    color: #2563eb;
+
+    margin-bottom: 10px;
+}
+
+
+.why-card p {
+
+    color: #4b5563;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+
+    background: white;
+}
+
+
+.about-content {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    color: #4b5563;
+
+    text-align: left;
+}
+
+
+.about-content p {
+
+    margin-bottom: 18px;
+}
+
+
+.faculty-box {
+
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #2563eb;
+
+    text-align: center;
+}
+
+
+.faculty-box h3 {
+
+    color: #111827;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+.faculty-box h4 {
+
+    color: #2563eb;
+
+    margin-bottom: 8px;
+
+    font-size: 17px;
+}
+
+
+.faculty-box p {
+
+    color: #4b5563;
+
+    margin: 6px;
+}
+
+
+/* =====================================================
+   BROCHURE
+===================================================== */
+
+.brochure {
+
+    background: #e0f2fe;
+}
+
+
+.brochure-buttons {
+
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   ADMISSION
+===================================================== */
+
+.admission {
+
+    background: #f8fafc;
+}
+
+
+.form-container {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+
+    text-align: left;
+}
+
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+    color: #374151;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-family: Arial;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(37,99,235,0.1);
+}
+
+
+.form-group textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+.form-submit {
+
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+
+    background: #111827;
+
+    color: white;
+}
+
+
+.contact h2 {
+
+    color: white;
+}
+
+
+.contact .section-title-line {
+
+    background: #60a5fa;
+}
+
+
+.contact p {
+
+    margin: 8px;
+
+    font-size: 17px;
+}
+
+
+.contact-info {
+
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #030712;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 28px 15px;
+
+    font-size: 14px;
+}
+
+
+footer p {
+
+    margin: 5px;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    background: #25D366;
+
+    color: white;
+
+    padding: 14px 20px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.2);
+
+    z-index: 2000;
+
+    transition: 0.3s;
+}
+
+
+.whatsapp:hover {
+
+    transform: scale(1.05);
+
+    background: #16a34a;
+}
+
+
+/* =====================================================
+   COURSE MODAL
+===================================================== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        rgba(0,0,0,0.65);
+
+    z-index: 3000;
+
+    overflow-y: auto;
+
+    padding: 30px 15px;
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+    text-align: left;
+
+    box-shadow:
+        0 10px 40px
+        rgba(0,0,0,0.3);
+}
+
+
 .modal-close {
+
     position: absolute;
 
     right: 15px;
+
     top: 10px;
 
     width: 35px;
+
     height: 35px;
 
     border: none;
 
     background: transparent;
 
-    color: #777;
+    color: #6b7280;
 
-    font-size: 28px;
+    font-size: 30px;
 
     cursor: pointer;
 }
 
+
 .modal-close:hover {
-    color: #e67e22;
+
+    color: #2563eb;
 }
 
-.modal-box h2 {
-    margin-bottom: 5px;
 
-    color: #28547a;
+.modal-content h2 {
 
-    font-size: 28px;
+    color: #111827;
+
+    margin-bottom: 12px;
+
+    font-size: 30px;
 }
 
-.modal-box h3 {
+
+.modal-content h3 {
+
+    color: #2563eb;
+
     margin-top: 25px;
 
-    margin-bottom: 10px;
-
-    color: #28547a;
-}
-
-.modal-box p {
-    color: #666;
-}
-
-.modal-box ul {
-    padding-left: 22px;
-
-    color: #555;
-}
-
-.modal-box li {
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 
-/* ==========================================
+.modal-content p {
+
+    color: #4b5563;
+
+    margin-bottom: 12px;
+}
+
+
+.modal-content ul {
+
+    padding-left: 25px;
+
+    color: #374151;
+}
+
+
+.modal-content li {
+
+    margin-bottom: 7px;
+}
+
+
+/* =====================================================
    MODAL FEATURED
-========================================== */
+===================================================== */
 
 .modal-featured {
-    padding: 15px;
 
-    margin-bottom: 20px;
+    background: #eff6ff;
 
-    background: #fffaf5;
+    border-left: 5px solid #2563eb;
 
-    border-left: 4px solid #e67e22;
+    padding: 20px;
 
-    border-radius: 5px;
+    border-radius: 8px;
+
+    margin-bottom: 25px;
 }
 
-.modal-featured span {
-    color: #e67e22;
-
-    font-size: 12px;
-
-    font-weight: bold;
-}
 
 .modal-featured h2 {
-    margin-top: 7px;
+
+    margin-top: 8px;
 }
 
 
-/* ==========================================
-   MODAL INFO
-========================================== */
-
 .modal-info {
+
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 10px;
+    gap: 12px;
 
-    margin: 20px 0;
+    margin: 25px 0;
 }
+
 
 .modal-info div {
-    padding: 13px;
 
-    background: #f5f9fc;
+    background: #f8fafc;
 
-    border: 1px solid #e0e8ef;
+    border: 1px solid #dbeafe;
 
-    border-radius: 6px;
+    padding: 15px;
+
+    border-radius: 8px;
 
     text-align: center;
-
-    color: #666;
-
-    font-size: 14px;
 }
+
 
 .modal-info strong {
+
     display: block;
 
-    color: #28547a;
+    color: #2563eb;
 
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 
 
-/* ==========================================
-   CURRICULUM
-========================================== */
+.modal-info span {
 
-.curriculum {
-    margin-top: 15px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 6px;
-
-    overflow: hidden;
-}
-
-.curriculum-row {
-    display: grid;
-
-    grid-template-columns:
-        170px 1fr;
-
-    border-bottom: 1px solid #ddd;
-}
-
-.curriculum-row:last-child {
-    border-bottom: none;
-}
-
-.curriculum-row div {
-    padding: 11px 13px;
-
-    color: #555;
+    color: #4b5563;
 
     font-size: 14px;
 }
 
-.curriculum-row.heading {
-    background: #28547a;
+
+/* =====================================================
+   MODAL CURRICULUM
+===================================================== */
+
+.modal-content .curriculum {
+
+    margin-bottom: 25px;
 }
 
-.curriculum-row.heading div {
-    color: white;
-
-    font-weight: bold;
-}
-
-.curriculum-row:not(.heading)
-div:first-child {
-    background: #f5f9fc;
-
-    color: #28547a;
-
-    font-weight: bold;
-}
-
-
-/* ==========================================
-   MODAL ACTIONS
-========================================== */
 
 .modal-actions {
-    margin-top: 25px;
 
-    text-align: center;
+    border-top: 1px solid #e5e7eb;
 
     padding-top: 20px;
 
-    border-top: 1px solid #eee;
+    text-align: center;
+
+    margin-top: 25px;
 }
 
 
-/* ==========================================
+/* =====================================================
    MOBILE
-========================================== */
+===================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
-    header h1 {
-        font-size: 25px;
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
     }
+
+
+    nav {
+
+        line-height: 2;
+    }
+
 
     nav a {
-        margin: 3px 4px;
 
-        font-size: 13px;
+        margin: 5px 8px;
     }
+
 
     .hero {
-        padding: 55px 20px;
+
+        padding: 70px 20px;
     }
 
+
+    .hero h1 {
+
+        font-size: 36px;
+    }
+
+
     .hero h2 {
+
+        font-size: 20px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+
+    .weekend-info {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .academy-name {
+
+        font-size: 16px;
+    }
+
+
+    .tagline-small {
+
+        font-size: 10px;
+    }
+
+
+    .logo-container img {
+
+        width: 50px;
+
+        height: 50px;
+    }
+
+
+    .hero h1 {
+
         font-size: 30px;
     }
 
-    section {
-        padding: 45px 5%;
+
+    .section {
+
+        padding: 55px 5%;
     }
 
-    .card {
-        width: 100%;
 
-        max-width: 340px;
+    .section h2 {
+
+        font-size: 28px;
     }
 
-    .weekend-program {
-        padding: 25px 15px;
+
+    .form-container {
+
+        padding: 22px;
     }
 
-    .weekend-program h3 {
-        font-size: 23px;
+
+    .whatsapp {
+
+        right: 12px;
+
+        bottom: 12px;
+
+        padding: 12px 16px;
     }
+
+
+    .weekend-container {
+
+        padding: 22px 15px;
+    }
+
+
+    .weekend-info {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .curriculum-row {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .curriculum-row:not(.heading)
+    div:first-child {
+
+        background: #eff6ff;
+    }
+
 
     .modal {
+
         padding: 10px;
     }
 
-    .modal-box {
+
+    .modal-content {
+
         margin: 15px auto;
 
         padding: 25px 18px;
     }
 
+
     .modal-info {
+
         grid-template-columns: 1fr;
     }
 
-    .curriculum-row {
-        grid-template-columns: 1fr;
+
+    .modal-content h2 {
+
+        font-size: 24px;
     }
 
-    .curriculum-row:not(.heading)
-    div:first-child {
-        background: #eef5fa;
-    }
 
     .btn {
+
         margin: 5px auto;
-    }
-
-}
-
-
-/* ==========================================
-   SMALL MOBILE
-========================================== */
-
-@media (max-width: 480px) {
-
-    .logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .hero h2 {
-        font-size: 26px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .section-title {
-        font-size: 26px;
-    }
-
-    .modal-box h2 {
-        font-size: 23px;
     }
 
 }
