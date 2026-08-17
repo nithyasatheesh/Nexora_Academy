@@ -1,978 +1,577 @@
-/* =========================================================
-   NEXORA DATA & AI ACADEMY
-   COMPLETE WEBSITE CSS
-========================================================= */
-
-
-/* =========================================================
-   GLOBAL
-========================================================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #222;
+    background: #ffffff;
+}
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background: #ffffff;
-}
-
 a {
     text-decoration: none;
 }
 
-button {
-    font-family: inherit;
-}
 
-
-/* =========================================================
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
 header {
-    background: linear-gradient(
-        135deg,
-        #ffffff,
-        #f3f8ff
-    );
-
-    padding: 25px 20px 20px;
-
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.header-container {
-    max-width: 1150px;
-    margin: auto;
+    padding: 20px;
     text-align: center;
+    background: #f5f9ff;
+    border-bottom: 1px solid #ddd;
 }
-
-
-/* LOGO */
 
 .logo {
-    width: 105px;
-    height: 105px;
-
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-
-/* ACADEMY NAME */
-
 .academy-name {
-    font-size: 34px;
-    font-weight: 700;
-
+    font-size: 32px;
+    font-weight: bold;
     color: #173f72;
-
-    letter-spacing: 0.5px;
 }
 
 .tagline {
-    font-size: 18px;
-
+    font-size: 17px;
     color: #555;
-
-    margin-top: 5px;
 }
 
-
-/* TRAINER */
-
 .trainer-name {
-    margin-top: 14px;
-
+    margin-top: 12px;
     font-size: 20px;
-
-    font-weight: 700;
-
-    color: #222;
+    font-weight: bold;
 }
 
 .trainer-role {
+    color: #2563eb;
     font-size: 16px;
-
-    color: #555;
+    font-weight: bold;
 }
 
 .trainer-qualification {
-    font-size: 15px;
-
     color: #555;
-
-    margin-top: 2px;
+    font-size: 15px;
 }
 
 
-/* =========================================================
+/* =========================
    NAVIGATION
-========================================================= */
+========================= */
 
 nav {
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 nav a {
-    display: inline-block;
-
-    margin: 5px 8px;
-
-    padding: 9px 16px;
-
+    margin: 6px 10px;
+    text-decoration: none;
     color: #173f72;
-
-    font-weight: 600;
-
-    border-radius: 6px;
-
-    transition: all 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 5px;
 }
 
 nav a:hover {
     background: #173f72;
-
     color: white;
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
-    background:
-        linear-gradient(
-            135deg,
-            #edf5ff,
-            #ffffff
-        );
-
-    padding: 85px 20px;
-
+    padding: 80px 20px;
     text-align: center;
+    background: linear-gradient(
+        135deg,
+        #eaf3ff,
+        #ffffff
+    );
 }
 
 .hero h1 {
     font-size: 44px;
-
     color: #173f72;
-
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .hero h2 {
-    font-size: 25px;
-
-    margin-bottom: 18px;
-
+    font-size: 24px;
     color: #333;
 }
 
 .hero p {
     max-width: 800px;
-
-    margin: auto;
-
+    margin: 20px auto;
     font-size: 18px;
-
     color: #555;
 }
 
 
-/* HERO BUTTONS */
-
-.hero-buttons {
-    margin-top: 30px;
-}
-
-
-/* =========================================================
+/* =========================
    BUTTONS
-========================================================= */
+========================= */
 
+button,
 .btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     display: inline-block;
-
-    padding: 13px 24px;
-
     margin: 7px;
-
-    border-radius: 7px;
-
-    font-weight: 600;
-
-    transition: all 0.25s ease;
+    font-weight: bold;
 }
 
 .btn-primary {
     background: #173f72;
-
     color: white;
 }
 
 .btn-primary:hover {
     background: #0e2c52;
-
-    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    border: 2px solid #173f72;
-
-    color: #173f72;
-
     background: white;
+    color: #173f72;
+    border: 2px solid #173f72;
 }
 
 .btn-secondary:hover {
     background: #173f72;
-
     color: white;
-
-    transform: translateY(-2px);
 }
 
 
-/* =========================================================
+/* =========================
    SECTIONS
-========================================================= */
+========================= */
 
 section {
-    padding: 70px 20px;
+    padding: 50px 10%;
 }
 
 .container {
     max-width: 1100px;
-
     margin: auto;
 }
 
-
-/* SECTION TITLE */
-
 .section-title {
     text-align: center;
-
-    font-size: 32px;
-
     color: #173f72;
-
-    margin-bottom: 12px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .section-subtitle {
     text-align: center;
-
     color: #666;
-
     max-width: 750px;
-
-    margin: 0 auto 35px;
+    margin: 0 auto 30px;
 }
 
 
-/* =========================================================
-   ABOUT
-========================================================= */
+/* =========================
+   CARDS
+========================= */
 
-.about-box {
-    max-width: 850px;
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    margin: auto;
+.card {
+    border: 1px solid #ddd;
+    padding: 25px;
+    width: 220px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
 
-    text-align: center;
-
-    font-size: 17px;
-
-    color: #555;
-
-    background: #f8fbff;
-
-    padding: 30px;
-
-    border-radius: 12px;
-
-    border: 1px solid #e2ebf5;
+.card h3 {
+    color: #173f72;
 }
 
 
-/* =========================================================
+/* =========================
    PROGRAM CARD
-========================================================= */
+========================= */
 
 .program-card {
     max-width: 950px;
-
-    margin: 35px auto;
-
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 12px;
     background: white;
-
-    border-radius: 14px;
-
-    padding: 40px;
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,0.10);
-
-    border: 1px solid #e5e5e5;
+    border: 1px solid #ddd;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
 }
 
 .program-card h3 {
-    color: #173f72;
-
     font-size: 28px;
-
-    margin-bottom: 10px;
+    color: #173f72;
+    margin-bottom: 5px;
 }
 
 .program-type {
-    font-weight: 600;
-
-    color: #555;
-
-    margin-bottom: 22px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 
-/* =========================================================
+/* =========================
    PROGRAM DETAILS
-========================================================= */
+========================= */
 
 .program-details {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 14px;
-
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     margin: 25px 0;
 }
 
 .detail {
-    background: #f5f8fc;
-
-    padding: 16px;
-
-    border-radius: 8px;
-
+    padding: 15px;
+    background: #f4f8fd;
+    border-radius: 7px;
     border-left: 4px solid #173f72;
 }
 
 .detail strong {
     display: block;
-
     color: #173f72;
-
-    margin-bottom: 3px;
 }
 
 
-/* =========================================================
+/* =========================
    LEARNING PATH
-========================================================= */
+========================= */
 
 .learning-path {
     margin: 25px 0;
-
     padding: 22px;
-
-    background: #f8fbff;
-
+    background: #f5f9ff;
     border-left: 5px solid #173f72;
-
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .learning-path h4 {
     color: #173f72;
-
     margin-bottom: 10px;
-
-    font-size: 19px;
-}
-
-.learning-path p {
-    color: #555;
-
-    margin-bottom: 7px;
 }
 
 
-/* =========================================================
-   CURRICULUM TABLE
-========================================================= */
+/* =========================
+   CURRICULUM
+========================= */
 
 .curriculum-table {
     margin-top: 20px;
-
-    border: 1px solid #dce7f5;
-
+    border: 1px solid #ddd;
     border-radius: 8px;
-
     overflow: hidden;
-
-    background: white;
 }
-
-
-/* EACH ROW */
 
 .curriculum-row {
     display: grid;
-
-    grid-template-columns:
-        220px 1fr;
-
-    border-bottom: 1px solid #dce7f5;
+    grid-template-columns: 220px 1fr;
+    border-bottom: 1px solid #ddd;
 }
 
 .curriculum-row:last-child {
     border-bottom: none;
 }
 
-
-/* CELLS */
-
 .curriculum-row > div {
     padding: 15px;
 }
 
-
-/* HEADER */
-
 .curriculum-header {
     background: #173f72;
-
     color: white;
-
     font-weight: bold;
 }
-
-
-/* MODULE COLUMN */
 
 .curriculum-row:not(.curriculum-header)
 > div:first-child {
-
-    background: #f3f7fc;
-
+    background: #f1f6fc;
     color: #173f72;
-
-    font-weight: 600;
+    font-weight: bold;
 }
 
 
-/* TOPIC COLUMN */
-
-.curriculum-row:not(.curriculum-header)
-> div:last-child {
-
-    color: #555;
-}
-
-
-/* HOVER */
-
-.curriculum-row:not(.curriculum-header):hover {
-
-    background: #f8fbff;
-}
-
-
-/* =========================================================
+/* =========================
    PROJECTS
-========================================================= */
+========================= */
 
 .projects {
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 22px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .project-card {
-    background: #f8fbff;
-
-    border: 1px solid #dce7f5;
-
-    padding: 28px;
-
+    border: 1px solid #ddd;
+    padding: 25px;
     border-radius: 10px;
-
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.08);
+    background: #f8fbff;
 }
 
 .project-card h3 {
-
     color: #173f72;
-
-    margin-bottom: 10px;
-
-    font-size: 21px;
 }
 
 .project-card p {
-
     color: #555;
 }
 
 
-/* PROJECT BUTTON */
-
-.project-card .btn {
-
-    margin-top: 15px;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   FEE
-========================================================= */
-
-.fee {
-
-    font-size: 32px;
-
-    font-weight: bold;
-
-    color: #173f72;
-
-    margin: 20px 0 5px;
-}
-
-.fee-note {
-
-    color: #777;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================================
-   FEATURES / WHY NEXORA
-========================================================= */
+/* =========================
+   FEATURES
+========================= */
 
 .features {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .feature {
-
-    padding: 28px;
-
-    background: #f7f9fc;
-
-    border-radius: 10px;
-
+    padding: 25px;
     text-align: center;
-
-    border: 1px solid #e4eaf2;
-
-    transition: all 0.3s ease;
-}
-
-.feature:hover {
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 7px 20px rgba(0,0,0,0.08);
+    background: #f5f8fc;
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
 .feature h3 {
-
     color: #173f72;
-
-    margin-bottom: 8px;
-}
-
-.feature p {
-
-    color: #555;
 }
 
 
-/* =========================================================
+/* =========================
    TRAINING METHODOLOGY
-========================================================= */
+========================= */
 
 .method {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-
-    text-align: center;
 }
 
 .method-box {
-
-    padding: 28px;
-
+    padding: 25px;
+    text-align: center;
+    background: #f5f8fc;
     border-radius: 10px;
-
-    background: #f7f9fc;
-
-    border: 1px solid #e4eaf2;
 }
 
 .method-box h3 {
-
     color: #173f72;
-
-    margin: 8px 0;
-}
-
-.method-box p {
-
-    color: #555;
 }
 
 .percentage {
-
     font-size: 30px;
-
     font-weight: bold;
-
     color: #173f72;
 }
 
 
-/* =========================================================
-   RESOURCES
-========================================================= */
+/* =========================
+   ABOUT
+========================= */
 
-#resources {
-
-    background: #f8fbff;
+.about-box {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    background: #f5f9ff;
+    border-radius: 10px;
+    color: #555;
 }
 
 
-/* =========================================================
+/* =========================
+   FEES
+========================= */
+
+.fee {
+    font-size: 32px;
+    font-weight: bold;
+    color: #173f72;
+    margin-top: 20px;
+}
+
+.fee-note {
+    color: #777;
+}
+
+
+/* =========================
    CONTACT
-========================================================= */
+========================= */
 
 .contact-box {
-
     max-width: 700px;
-
     margin: auto;
-
+    padding: 30px;
     text-align: center;
-
-    background: #f7f9fc;
-
-    padding: 35px;
-
-    border-radius: 12px;
-
-    border: 1px solid #e3e9f0;
+    background: #f5f8fc;
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
 .contact-box p {
-
-    margin: 8px 0;
-
     font-size: 17px;
+    margin: 8px;
 }
 
 .contact-box a {
-
     color: #173f72;
-
-    font-weight: 600;
+    font-weight: bold;
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer {
-
-    background: #173f72;
-
-    color: white;
-
+    padding: 30px;
     text-align: center;
-
-    padding: 28px 15px;
+    background: #173f72;
+    color: white;
 }
 
 footer p {
-
     margin: 5px;
 }
 
 
-/* =========================================================
-   DOCUMENT / RESOURCE BUTTON AREA
-========================================================= */
-
-.resource-buttons {
-
-    text-align: center;
-
-    margin-top: 30px;
-}
-
-
-/* =========================================================
-   MOBILE RESPONSIVE
-========================================================= */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
 
-
-    /* HEADER */
-
     .academy-name {
-
-        font-size: 27px;
-    }
-
-    .tagline {
-
-        font-size: 15px;
-    }
-
-    .trainer-name {
-
-        font-size: 18px;
-    }
-
-
-    /* HERO */
-
-    .hero {
-
-        padding: 65px 20px;
+        font-size: 26px;
     }
 
     .hero h1 {
-
         font-size: 34px;
     }
 
     .hero h2 {
-
         font-size: 21px;
     }
 
-    .hero p {
-
-        font-size: 16px;
-    }
-
-
-    /* PROGRAM */
-
-    .program-card {
-
-        padding: 25px 20px;
-    }
-
-    .program-card h3 {
-
-        font-size: 24px;
-    }
-
     .program-details {
-
         grid-template-columns: 1fr;
     }
 
+    .projects {
+        grid-template-columns: 1fr;
+    }
 
-    /* CURRICULUM */
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .method {
+        grid-template-columns: 1fr;
+    }
 
     .curriculum-row {
-
         grid-template-columns: 1fr;
     }
 
     .curriculum-header {
-
         display: none;
     }
 
     .curriculum-row > div {
-
         padding: 12px;
     }
 
-    .curriculum-row:not(.curriculum-header)
-    > div:first-child {
-
-        background: #eaf2fb;
-
-        border-bottom: 1px solid #dce7f5;
-    }
-
-
-    /* PROJECTS */
-
-    .projects {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    /* FEATURES */
-
-    .features {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    /* TRAINING METHOD */
-
-    .method {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    /* BUTTONS */
-
     .btn {
-
         display: block;
-
         width: 90%;
-
         max-width: 330px;
-
         margin: 10px auto;
-
         text-align: center;
+    }
+
+    nav a {
+        margin: 4px;
+        font-size: 13px;
     }
 
 }
 
 
-/* =========================================================
+/* =========================
    SMALL MOBILE
-========================================================= */
+========================= */
 
 @media (max-width: 480px) {
 
-
     .logo {
-
-        width: 85px;
-
-        height: 85px;
+        width: 80px;
+        height: 80px;
     }
-
 
     .academy-name {
-
-        font-size: 23px;
+        font-size: 22px;
     }
-
 
     .tagline {
-
         font-size: 14px;
     }
-
 
     .trainer-name {
-
-        font-size: 17px;
+        font-size: 18px;
     }
 
-
-    .trainer-role {
-
-        font-size: 14px;
+    .hero {
+        padding: 60px 15px;
     }
-
-
-    .trainer-qualification {
-
-        font-size: 13px;
-    }
-
-
-    nav a {
-
-        margin: 3px;
-
-        padding: 7px 9px;
-
-        font-size: 13px;
-    }
-
 
     .hero h1 {
-
-        font-size: 29px;
-    }
-
-
-    .hero h2 {
-
-        font-size: 19px;
-    }
-
-
-    .section-title {
-
         font-size: 28px;
     }
 
+    section {
+        padding: 40px 5%;
+    }
 
     .program-card {
-
         padding: 20px 15px;
     }
 
-
-    .curriculum-row > div {
-
-        font-size: 14px;
-    }
-
-
-    .contact-box {
-
-        padding: 25px 15px;
+    .section-title {
+        font-size: 27px;
     }
 
 }
