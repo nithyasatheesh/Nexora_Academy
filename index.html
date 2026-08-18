@@ -366,37 +366,7 @@
         .project-link:hover {
             text-decoration: underline;
         }
-/*=======================================
-        <section id="resources">
-
-    <h2>📚 Free Learning Resources</h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>🐍 Python Cheat Sheet</h3>
-
-            <p>
-                Python basics, syntax, loops,
-                functions and data structures.
-            </p>
-
-            <a
-                href="resources/python-cheat-sheet.html"
-                target="_blank"
-            >
-                📖 Read Online
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-       
-
-        /* =========================
+/* =========================
            FEES
         ========================= */
 
@@ -744,6 +714,13 @@
         /* =========================
            MOBILE
         ========================= */
+
+
+        @media (max-width: 1100px) {
+            .cards {
+                grid-template-columns: repeat(2, minmax(220px, 1fr));
+            }
+        }
 
         @media (max-width: 900px) {
 
@@ -1450,8 +1427,6 @@
             <a
                 class="project-link"
                 href="documents/Student-Performance-Prediction-Project.zip" download
-                download
-                download
             >
                 💻 Download Sample Project Code (ZIP)
             </a>
@@ -1581,6 +1556,105 @@
 
 </section>
 
+
+
+
+<!-- =====================================================
+     FREE LEARNING RESOURCES
+===================================================== -->
+
+<section class="section" id="resources">
+
+    <h2>📚 Free Learning Resources</h2>
+
+    <div class="section-title-line"></div>
+
+    <p class="section-intro">
+        Free practical cheat sheets and learning guides
+        for Python, Data Science, Machine Learning,
+        and Generative AI.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🐍</div>
+            <h3>Python Cheat Sheet</h3>
+            <p>
+                Python basics, variables, data types,
+                conditions, loops and functions.
+            </p>
+            <a class="details-btn"
+               href="resources/python-cheat-sheet.html"
+               target="_blank"
+               rel="noopener">
+                📖 Read Online
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🐼</div>
+            <h3>Pandas Cheat Sheet</h3>
+            <p>
+                DataFrames, filtering, missing values,
+                GroupBy, sorting and merging.
+            </p>
+            <a class="details-btn"
+               href="resources/pandas-cheat-sheet.html"
+               target="_blank"
+               rel="noopener">
+                📖 Read Online
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🔍</div>
+            <h3>EDA Cheat Sheet</h3>
+            <p>
+                Data profiling, missing values,
+                outliers, statistics and visualization.
+            </p>
+            <a class="details-btn"
+               href="resources/eda-cheat-sheet.html"
+               target="_blank"
+               rel="noopener">
+                📖 Read Online
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🤖</div>
+            <h3>ML Evaluation Metrics</h3>
+            <p>
+                MAE, MSE, RMSE, R², Accuracy,
+                Precision, Recall, F1 and ROC-AUC.
+            </p>
+            <a class="details-btn"
+               href="resources/ml-evaluation-metrics.html"
+               target="_blank"
+               rel="noopener">
+                📖 Read Online
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Prompt Engineering Guide</h3>
+            <p>
+                Prompt structure, context, constraints,
+                examples and output formats.
+            </p>
+            <a class="details-btn"
+               href="resources/prompt-engineering-guide.html"
+               target="_blank"
+               rel="noopener">
+                📖 Read Online
+            </a>
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- =====================================================
