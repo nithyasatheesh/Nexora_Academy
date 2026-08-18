@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Generative AI Prompt Engineering Cheat Sheet | Neylora Data & AI Academy</title>
+<meta name="description" content="Free prompt engineering guide covering role, task, context, constraints, examples and output format.">
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f8fafc;color:#111827;line-height:1.7}
+header{background:#111827;color:#fff;padding:28px 20px;text-align:center}
+.container{max-width:1000px;margin:30px auto;background:#fff;padding:35px;border-radius:14px;box-shadow:0 5px 25px rgba(0,0,0,.08)}
+h1{color:#111827}h2{color:#1d4ed8;border-bottom:2px solid #e5e7eb;padding-bottom:7px}
+pre{background:#111827;color:#fff;padding:16px;border-radius:8px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#eef2ff}
+.tip{background:#eff6ff;padding:15px;border-left:4px solid #2563eb;border-radius:6px}
+a{color:#1d4ed8}footer{text-align:center;padding:25px;color:#6b7280}
+</style></head><body>
+<header><h1>Neylora Data & AI Academy</h1><p>Free Learning Resource</p></header>
+<div class="container">
+<h1>Generative AI Prompt Engineering Cheat Sheet</h1>
+<p>A practical reference for writing clear prompts for LLM applications.</p>
+<h2>Prompt Structure</h2><pre><code>ROLE
+You are a data science instructor.
+
+TASK
+Explain linear regression to beginners.
+
+CONTEXT
+The learners know Python basics.
+
+CONSTRAINTS
+Use a simple example and avoid advanced mathematics.
+
+OUTPUT FORMAT
+Give the explanation in five numbered steps.</code></pre>
+<h2>Prompt Components</h2>
+<table><tr><th>Component</th><th>Purpose</th></tr>
+<tr><td>Role</td><td>Sets expertise or perspective</td></tr>
+<tr><td>Task</td><td>States exactly what must be done</td></tr>
+<tr><td>Context</td><td>Provides relevant background</td></tr>
+<tr><td>Constraints</td><td>Controls scope, style or length</td></tr>
+<tr><td>Examples</td><td>Shows the expected pattern</td></tr>
+<tr><td>Output Format</td><td>Defines the desired structure</td></tr></table>
+<h2>Few-Shot Prompt</h2><pre><code>Example:
+Input: Product is damaged
+Output: Complaint
+
+Example:
+Input: Delivery was late
+Output: Complaint
+
+Now classify:
+Input: The product arrived on time.
+Output:</code></pre>
+<h2>Checklist</h2><ul><li>Is the task specific?</li><li>Is enough context provided?</li><li>Are constraints clear?</li><li>Is the output format specified?</li><li>Can the answer be evaluated?</li></ul>
+<h2>Better Prompt</h2><pre><code>Explain Generative AI to MBA students in 200 words,
+using one business example and a five-point structure.</code></pre>
+<p><a href="../index.html">← Back to Academy</a></p></div>
+<footer>© 2026 Neylora Data & AI Academy</footer>
+</body></html>

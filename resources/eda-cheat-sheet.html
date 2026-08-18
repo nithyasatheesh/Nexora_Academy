@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Exploratory Data Analysis Cheat Sheet | Neylora Data & AI Academy</title>
+<meta name="description" content="Free EDA cheat sheet covering profiling, missing values, outliers, statistics, correlation and visualization.">
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f8fafc;color:#111827;line-height:1.7}
+header{background:#111827;color:#fff;padding:28px 20px;text-align:center}
+.container{max-width:1000px;margin:30px auto;background:#fff;padding:35px;border-radius:14px;box-shadow:0 5px 25px rgba(0,0,0,.08)}
+h1{color:#111827}h2{color:#1d4ed8;border-bottom:2px solid #e5e7eb;padding-bottom:7px}
+pre{background:#111827;color:#fff;padding:16px;border-radius:8px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#eef2ff}
+.tip{background:#eff6ff;padding:15px;border-left:4px solid #2563eb;border-radius:6px}
+a{color:#1d4ed8}footer{text-align:center;padding:25px;color:#6b7280}
+</style></head><body>
+<header><h1>Neylora Data & AI Academy</h1><p>Free Learning Resource</p></header>
+<div class="container">
+<h1>Exploratory Data Analysis (EDA) Cheat Sheet</h1>
+<p>Use EDA to understand data quality, distributions, relationships and patterns before modelling.</p>
+<h2>Dataset Inspection</h2><pre><code>df.shape
+df.head()
+df.info()
+df.describe()
+df.dtypes</code></pre>
+<h2>Missing Values & Duplicates</h2><pre><code>df.isnull().sum()
+df.isnull().mean() * 100
+df.duplicated().sum()
+df = df.drop_duplicates()</code></pre>
+<h2>Outliers using IQR</h2><pre><code>Q1 = df["Salary"].quantile(0.25)
+Q3 = df["Salary"].quantile(0.75)
+IQR = Q3 - Q1
+lower = Q1 - 1.5 * IQR
+upper = Q3 + 1.5 * IQR
+outliers = df[(df["Salary"] < lower) | (df["Salary"] > upper)]</code></pre>
+<h2>Visualization</h2><pre><code>import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.histplot(df["Salary"])
+sns.boxplot(x=df["Salary"])
+sns.scatterplot(data=df, x="Age", y="Salary")
+sns.heatmap(df.corr(numeric_only=True), annot=True)
+plt.show()</code></pre>
+<h2>EDA Questions</h2><ul><li>What is the shape of the data?</li><li>Are there missing values?</li><li>Are there duplicates?</li><li>Which variables contain outliers?</li><li>What relationships exist?</li><li>What business insights can be derived?</li></ul>
+<p><a href="../index.html">← Back to Academy</a></p></div>
+<footer>© 2026 Neylora Data & AI Academy</footer>
+</body></html>
