@@ -800,6 +800,116 @@
             text-decoration: underline;
         }
 
+
+        /* =========================
+           CLEAN CONTACT SECTION
+        ========================= */
+
+        .contact-section {
+            background: #f8fafc;
+        }
+
+        .contact-card {
+            max-width: 900px;
+            margin: 30px auto 0;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eff6ff;
+            border-radius: 12px;
+            font-size: 21px;
+            flex-shrink: 0;
+        }
+
+        .contact-label {
+            display: block;
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .contact-item a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #ffffff !important;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            text-decoration: none !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        .whatsapp-btn {
+            background: #16a34a;
+        }
+
+        .email-btn {
+            background: #2563eb;
+        }
+
+        .brochure-btn {
+            background: #7c3aed;
+        }
+
+        @media (max-width: 600px) {
+            .contact-card {
+                padding: 22px 18px;
+            }
+
+            .contact-actions {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
 </style>
 
 </head>
@@ -1974,63 +2084,85 @@
      CONTACT
 ===================================================== -->
 
-<section class="section contact" id="contact">
 
-    <h2>Contact Nexora</h2>
+<section id="contact" class="contact-section">
 
-    <div class="section-title-line">
-        <p>
-            📧 <strong>Email:</strong>
-            <a href="mailto:nithabi82@gmail.com" class="contact-link">
-                nithabi82@gmail.com
-            </a>
-        </p>
-
-        <p>
-            🌐 <strong>Website:</strong>
-            <a href="https://nithyasatheesh.github.io/Nexora_Academy/"
-               target="_blank"
-               class="contact-link">
-                nithyasatheesh.github.io/Nexora_Academy/
-            </a>
-        </p>
+    <div class="section-title">
+        <h2>Contact Nexora</h2>
+        <p>Get in touch for programs, projects, tuition and enquiries.</p>
     </div>
 
-    <p>
-        📍 <strong>Location:</strong>
-        Madurai, Tamil Nadu
-    </p>
+    <div class="contact-card">
 
-    <p>
-        📞 <strong>Phone / WhatsApp:</strong>
-        +91 81899 68996
-    </p>
+        <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:nithabi82@gmail.com">
+                    nithabi82@gmail.com
+                </a>
+            </div>
+        </div>
 
-    <div class="hero-buttons">
+        <div class="contact-item">
+            <span class="contact-icon">🌐</span>
+            <div>
+                <span class="contact-label">Website</span>
+                <a href="https://nithyasatheesh.github.io/Nexora_Academy/" target="_blank">
+                    nithyasatheesh.github.io/Nexora_Academy/
+                </a>
+            </div>
+        </div>
 
-        <a
-            class="btn btn-green"
-            href="https://wa.me/918189968996"
-            target="_blank">
-            💬 WhatsApp Us
-        </a>
+        <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+                <span class="contact-label">Location</span>
+                <span>Madurai, Tamil Nadu</span>
+            </div>
+        </div>
 
-        <a
-            class="btn"
-            href="mailto:nithabi82@gmail.com">
-            📧 Send Email
-        </a>
+        <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+                <span class="contact-label">Phone / WhatsApp</span>
+                <a href="tel:+918189968996">
+                    +91 81899 68996
+                </a>
+            </div>
+        </div>
 
-        <a
-            class="btn btn-dark"
-            href="documents/Nexora-Brochure.pdf"
-            target="_blank">
-            📄 View Brochure
-        </a>
+        <div class="contact-actions">
+
+            <a
+                class="contact-btn whatsapp-btn"
+                href="https://wa.me/918189968996"
+                target="_blank"
+            >
+                💬 WhatsApp Us
+            </a>
+
+            <a
+                class="contact-btn email-btn"
+                href="mailto:nithabi82@gmail.com"
+            >
+                📧 Send Email
+            </a>
+
+            <a
+                class="contact-btn brochure-btn"
+                href="documents/Nexora-Brochure.pdf"
+                target="_blank"
+            >
+                📄 View Brochure
+            </a>
+
+        </div>
 
     </div>
 
 </section>
+
 
 
 
