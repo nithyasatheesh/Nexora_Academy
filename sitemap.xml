@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://nithyasatheesh.github.io/Nexora_Academy/</loc>
+    </url>
+
+    <url>
+        <loc>https://nithyasatheesh.github.io/Nexora_Academy/resources/python-cheat-sheet.html</loc>
+    </url>
+
+    <url>
+        <loc>https://nithyasatheesh.github.io/Nexora_Academy/resources/pandas-cheat-sheet.html</loc>
+    </url>
+
+    <url>
+        <loc>https://nithyasatheesh.github.io/Nexora_Academy/resources/eda-cheat-sheet.html</loc>
+    </url>
+
+    <url>
+        <loc>https://nithyasatheesh.github.io/Nexora_Academy/resources/ml-evaluation-metrics.html</loc>
+    </url>
+
+    <url>
+        <loc>https://nithyasatheesh.github.io/Nexora_Academy/resources/prompt-engineering-guide.html</loc>
+    </url>
+
+</urlset>
