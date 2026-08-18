@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nithyasatheesh.github.io/Nexora_Academy/sitemap.xml
